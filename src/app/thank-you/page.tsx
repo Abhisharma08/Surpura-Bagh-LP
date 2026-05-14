@@ -35,7 +35,7 @@ export default function ThankYouPage() {
           <div className="space-y-4">
             <h1 className="text-3xl md:text-4xl font-headline text-primary">Your query has been received.</h1>
             <p className="text-lg text-muted-foreground">
-              Thank you for your interest. Your details have been successfully submitted to our admissions team.
+              Thank you for your interest. Your details have been successfully submitted to our team.
             </p>
           </div>
 
