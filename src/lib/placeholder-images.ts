@@ -15,13 +15,13 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
   {
     "id": "student-work",
     "description": "Graphic design student working on professional project",
-    "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1778676457/1_1_fpd2oi.png",
+    "imageUrl": "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778750424/branding_1_cp9isl.webp",
     "imageHint": "designer workspace"
   },
   {
     "id": "branding-mockup",
     "description": "Professional design awards and recognition",
-    "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1778676457/2_2_pj80qf.png",
+    "imageUrl": "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778750423/branding_2_lb26zv.png",
     "imageHint": "design excellence"
   },
   {
