@@ -223,7 +223,7 @@ export default function LandingPage() {
                 { icon: <PanelsTopLeft />, title: "Store Layout & Space Design", desc: "Layouts that mesmerise customers and drive long-term profitability." },
                 { icon: <Signpost />, title: "Navigation & Wayfinding Signages", desc: "Signages that guide customers and impact their purchase decisions." },
                 { icon: <ShoppingBag />, title: "Visual Merchandising", desc: "Merchandising strategies that bring customers in and back again." },
-                { icon: <Sofa />, title: "Retail Store Interior Designing", desc: "Interiors that build the right atmosphere around your brand" },
+                { icon: <Sofa />, title: "Retail Store Interior Designing", desc: "Interiors that build the right atmosphere around your brand." },
                 { icon: <Hammer />, title: "Materials & Fabrications", desc: "Budget-friendly materials that forge deeper customer brand connections." },
                 { icon: <Megaphone />, title: "Outdoor Advertising", desc: "High-footfall placements that put your brand where it matters." },
                 { icon: <SparkleIcon />, title: "Brand Activation", desc: "Events and installations that build strong direct brand-connect." },
