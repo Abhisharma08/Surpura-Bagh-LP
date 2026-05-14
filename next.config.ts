@@ -1,7 +1,7 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  basePath: '/Brand-Activation',
+  basePath: '/brand-activation',
   skipTrailingSlashRedirect: true,
   /* config options here */
   typescript: {
