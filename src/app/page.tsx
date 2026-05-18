@@ -7,6 +7,7 @@ import {
   BriefcaseBusiness,
   GraduationCap,
   Sparkles,
+  Subtitles,
 } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -63,7 +64,7 @@ export default function LandingPage() {
 
           <div className="flex items-center gap-4">
             <ScrollToLeadButton className="bg-secondary px-6 font-bold text-white hover:bg-secondary/90">
-             Plan Your Activation Campaign
+             Get Free Plan
             </ScrollToLeadButton>
           </div>
         </div>
@@ -91,12 +92,12 @@ export default function LandingPage() {
             <div className="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="w-full space-y-6 text-white">
                 <h1 className="font-headline text-3xl leading-tight text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:text-3xl">
-                  Your Target Audience Is Already In That Mall. <br />
-                  We Make Sure They Leave Knowing Your Brand
+                  Bangalore Sees Your Brand. Not Just Your Ad.
                 </h1>
 
                 <p className="max-w-xl text-xl text-white">
-                  On-ground brand activation campaigns for FMCG brands, D2C launches, real estate projects, and consumer brands across Bangalore.
+                On-ground brand activations across Koramangala, Whitefield, HSR, Indiranagar and Hebbal. <br />
+                1,200+ direct consumer contacts. Every campaign. Every time.
                 </p>
 
                 {/* <div className="flex max-w-2xl flex-wrap gap-2">
@@ -131,9 +132,45 @@ export default function LandingPage() {
                   ))}
                 </div> */}
 
-                <p className="text-lg italic text-secondary">
-                  BOOK A FREE CONSULTATION
-                </p>
+              {/* TRUST BADGES */}
+              <div className="mt-6 overflow-hidden rounded-xl border border-white/10 bg-primary/90 shadow-xl backdrop-blur-sm">
+                <div className="grid grid-cols-2 divide-x divide-y divide-white/10 md:grid-cols-4 md:divide-y-0">
+
+                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
+                    <span className="text-xl font-bold text-white">500+</span>
+                    <span className="text-sm font-medium text-secondary">
+                      Activations
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
+                    <span className="text-xl font-bold text-white">80+</span>
+                    <span className="text-sm font-medium text-secondary">
+                      Brands
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
+                    <span className="text-xl font-bold text-white">48 Hr</span>
+                    <span className="text-sm font-medium text-secondary">
+                      Plan Turnaround
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
+                    <span className="text-xl font-bold text-white">Zero</span>
+                    <span className="text-sm font-medium text-secondary">
+                      Subcontracting
+                    </span>
+                  </div>
+
+                  {/* <p className="col-span-full mt-4 text-xs text-white/70 text-center">
+                    AD Vantage Integrated Marketing · advanintegrated.in · Landing Page — Final Copy · Prepared by Contentify Tech ·
+                    <br />
+                    contentify.co.in
+                  </p> */}
+                </div>
+              </div>               
               </div>
 
               <div id="lead-form-top">
@@ -151,11 +188,11 @@ export default function LandingPage() {
             <div className="container mx-auto max-w-7xl px-4 text-center">
               
               <h2 className="mb-3 text-3xl font-bold text-primary">
-                CLIENT’S WE SERVE
+                BRANDS ACTIVATED ACROSS BANGALORE
               </h2>
 
               <p className="mx-auto mb-10 max-w-2xl text-muted-foreground">
-                Trusted by growing retail brands, franchise businesses, and emerging D2C companies across India.
+                500+ on-ground activations. 80+ brands. FMCG · D2C · Real Estate · Retail · EdTech
               </p>
 
               {/* LOGO MARQUEE */}
@@ -198,6 +235,9 @@ export default function LandingPage() {
                     </div>
                   ))}
                 </div>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  Join 80+ brands that chose on-ground over online
+                </p>
               </div>
             </div>
           </section>
@@ -224,23 +264,24 @@ export default function LandingPage() {
       {/* CONTENT */}
       <div className="order-1 space-y-6 lg:order-2">
         <SectionHeader
-          title="Consumer Engagement Campaigns Designed For Brand Recall"
+          title="Your Ad Got the Click. Did They Actually Buy?"
           subtitle={
             <>
-            We create activation experiences that help brands engage audiences through mall activations, product sampling, campus campaigns, and on-ground engagement across Bengaluru.
+          Digital ads build awareness. On-ground activations build buyers.
+           We put your brand — physically — in the hands of your exact consumer. Mall floors. Society gates. Campus grounds. Tech park corridors.
             </>
           }
           centered={false}
         />
         <p className="mt-2 text-lg leading-relaxed text-primary">
-          Built for visibility. Designed for interaction. Focused on brand recall.
+          Executed on-ground. Measured every day. Reported after every campaign.
         </p>
 
         <ul className="space-y-4">
           {[
-            "Brand Activation Specialists - Bengaluru",
-            "100+ Campaigns Executed Across India",
-            "Mall | Campus | On Grpund | Sampling",
+            "Bangalore's own on-ground activation team — no freelancers, no subcontracting",
+            "1,200+ direct consumer contacts delivered per campaign (not reach, not impressions)",
+            "Every campaign tracked, photographed, and reported — zero ambiguity",
           ].map((item) => (
             <li
               key={item}
@@ -252,9 +293,9 @@ export default function LandingPage() {
           ))}
         </ul>
 
-        <p className="mt-4 inline-block border-b-2 border-secondary pb-1 text-lg font-bold text-primary">
+        {/* <p className="mt-4 inline-block border-b-2 border-secondary pb-1 text-lg font-bold text-primary">
           We don’t just run campaigns, we create experiences consumers remember.
-        </p>
+        </p> */}
       </div>
 
     </div>
@@ -274,27 +315,27 @@ export default function LandingPage() {
         <SectionHeader
           title={
           <>
-         Your Audience Is Already Outside.
-          <br />
-          The Right Activation Strategy Helps You Reach Them.
+         They're Outside. Are You?
           </>
           }
-          subtitle="Today’s consumers engage more with brands they experience directly."
+          subtitle=""
           centered={false}
         />
 
       <div className="space-y-4">
 
       <p className="text-lg leading-relaxed text-muted-foreground">
-        On-ground activations help brands:
+        While your competitor runs digital ads, your consumer is walking through Forum Mall, past an RWA
+gate in HSR, or through a tech park in Whitefield. On-ground activations meet buyers where they
+already are — in the moment before they decide.
       </p>
 
       <ul className="space-y-4">
         {[
-          "Better retail visibility",
-          "Improved customer engagement",
-          "Stronger brand recall",
-          "End-to-end retail execution",
+          "3× higher first-trial conversion vs. digital-only campaigns [industry estimate]",
+          "Real conversations — not a 6-second pre-roll they skip",
+          "Brand recall that lasts weeks, not scroll-seconds",
+          "Community trust that no retargeting pixel can replicate",
         ].map((item) => (
           <li
             key={item}
@@ -308,7 +349,7 @@ export default function LandingPage() {
             <div className="space-y-4">
 
       <p className="text-lg leading-relaxed text-muted-foreground">
-        The right activation campaign helps your brand connect, engage, and stay memorable.
+        The right activation doesn't just build a brand. It builds the consumer who chooses your brand first
       </p>
       </div>
 
@@ -336,8 +377,8 @@ export default function LandingPage() {
           >
           <div className="container mx-auto max-w-7xl px-5">
             <SectionHeader
-              title="Six Ways We Get Your Brand In Front of the Right Consumer"
-              subtitle="From high-footfall mall environments to campus corridors and office parks, we activate your brand where your consumer actually is."
+              title="Six Formats. One City. Your Consumer, Up Close."
+              subtitle="From Phoenix Marketcity to Whitefield tech parks — we activate where Bangalore's buyers already move."
             />
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -345,31 +386,37 @@ export default function LandingPage() {
               {
                 icon: <Building2 />,
                 title: "Mall Activations",
+                Subtitles: "Where 1,200 Consumers Meet Your Brand in One Day",
                 desc: "High-footfall consumer engagement campaigns inside malls and retail environments.",
               },
               {
                 icon: <PackageOpen />,
-                title: "Product Sampling Campaigns",
+                title: "Product Sampling",
+                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
                 desc: "Wet & dry sampling campaigns that help consumers experience your product directly.",
               },
               {
                 icon: <GraduationCap />,
                 title: "School & College Activations",
+                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
                 desc: "Youth-focused engagement campaigns designed to build early brand affinity.",
               },
               {
                 icon: <MapPinned />,
                 title: "Feet On Street Campaigns",
+                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
                 desc: "Ground-level outreach campaigns that bring your brand directly to consumers.",
               },
               {
                 icon: <Sparkles />,
                 title: "Experiential Marketing",
+                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
                 desc: "Immersive brand experiences designed to improve engagement and recall.",
               },
               {
                 icon: <BriefcaseBusiness />,
                 title: "Corporate Activations",
+                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
                 desc: "Professional engagement campaigns for enterprise and workplace audiences.",
               },
               ].map((item) => (
@@ -385,6 +432,10 @@ export default function LandingPage() {
                     <h4 className="font-headline text-lg text-primary">
                       {item.title}
                     </h4>
+
+                      <p className="text-sm font-semibold text-secondary">
+                        {item.Subtitles}
+                      </p>
 
                     <p className="text-sm leading-relaxed text-muted-foreground">
                       {item.desc}
@@ -403,15 +454,17 @@ export default function LandingPage() {
 >
   <div className="container mx-auto max-w-7xl px-4">
     <SectionHeader
-      title="Choose Your Campaign Format. We Handle Everything Else."
+      title="Pick Your Format. We Handle the Rest."
       subtitle={
         <>
-          Four activation formats. Each built for a different brand objective.{" "}
+          Four formats. Each built for one thing: {" "}
           <span className="font-semibold text-secondary">
-          Not sure which one fits?
+          your consumer
           </span>
           ,{" "}
-          Tell us your campaign goal and we'll recommend the right approach.
+          <span className="font-semibold text-secondary">
+          face to face with your brand
+          </span>,{" "}
         </>
       }
       light
@@ -421,60 +474,59 @@ export default function LandingPage() {
 
       {[
       {
-        tag: "STARTER",
-        title: "Mall Activations",
+        tag: "HIGHEST FOOTFALL",
+        title: "Mall Floor Activations",
         desc: "",
         features: [
-          "Branded activation stall setup & branding",
-          "Trained brand ambassadors (3–5 days)",
-          "Consumer interaction & data capture",
-          "Product sampling / demonstration",
-          "Post-campaign interaction report",
+          "Forum · Phoenix · Nexus · Orion · Elements",
+          "800–1,200 direct consumer contacts/day",
+          "Demo counters, sampling, brand experience zones",
+          "Permissions + manpower + setup — all handled",
+          "Weekend premium + weekday budget slots",
         ],
-        cta: "Get My Mall Activation Quote",
+        cta: "Plan My Mall Activation",
       },
 
       {
-        tag: "SAMPLING",
-        title: "Product Sampling Campaigns",
+        tag: "HIGHEST TRIAL RATE",
+        title: "Product Sampling",
         desc: "",
         features: [
-          "Wet or dry sampling campaign design",
-          "Sampling location strategy (malls, RWA, retail clusters)",
-          "Trained sampling brand ambassadors",
-          "Consumer feedback capture",
-          "Trial-to-intent measurement report",
+          "RWAs · supermarkets · transit hubs · kirana clusters",
+          "500–2,000 product trials per campaign day",
+          "Consumer feedback captured post-trial",
+          "SKU-targeted — right product, right profile",
+          "Post-campaign trial + intent data report",
         ],
-        cta: "Plan my Sampling Campaign",
+        cta: "Start My Sampling Campaign",
       },
 
       {
-        tag: "CAMPUS",
-        title: "Campus Activation Campaign",
+        tag: "HIGHEST ENGAGEMENT RATE",
+        title: "Campus Activations",
         desc: "",
         features: [
-          "Campus selection & permission management",
-          "Brand ambassador teams (students preferred)",
-          "Interactive engagement + digital integration",
-          "App download / sign-up drive",
-          "Campus-specific creative production",
+          "Bangalore's top engineering, MBA, design colleges",
+          "200–450 student touchpoints per campus day",
+          "Brand ambassador conversion built in",
+          "Ideal for D2C, EdTech, FMCG, fintech launches",
+          "Social moment creation for organic amplification",
         ],
-        cta: "Get A Plan",
+        cta: "Activate On Campus",
       },
 
       {
-        tag: "FULL STACK",
-        title: "Full Brand Activation Strategy",
+        tag: "MAXIMUM REACH",
+        title: "Full Activation Programme",
         desc: "",
         features: [
-          "Multi-channel activation strategy",
-          "Mall + Campus + Feet-on-Street combined",
-          "Dedicated activation manager",
-          "Real-time campaign performance dashboard",
-          "Post-campaign brand lift study",
-          "Scalable for pan-India rollout",
+          "Mall + Sampling + Campus — one programme",
+          "Multi-zone Bangalore coverage in one plan",
+          "Single POC from brief to post-campaign report",
+          "Weekly updates + live execution photos",
+          "Project or retainer — your choice",
         ],
-        cta: "Get A Custom Activation Proposal",
+        cta: "Get My Full Strategy",
       },
       ].map((item) => (
         <div
@@ -548,42 +600,65 @@ export default function LandingPage() {
           {/* CONTENT */}
           <div className="order-1 space-y-6 lg:order-2">
             <SectionHeader
-              title="Numbers Our Clients Actually Measure After Every Campaign"
+              title="Clients Don't Measure Impressions. They Measure These."
               subtitle=""
               centered={false}
             />
+                          {/* TRUST BADGES
+              <div className="mt-6 overflow-hidden rounded-xl border border-white/10 bg-primary/90 shadow-xl backdrop-blur-sm">
+                <div className="grid grid-cols-2 divide-x divide-y divide-white/10 md:grid-cols-4 md:divide-y-0">
+
+                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
+                    <span className="text-xl font-bold text-white">1200+</span>
+                    <span className="text-sm font-medium text-secondary">
+                      Face-to-face consumer contacts per mall day
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
+                    <span className="text-xl font-bold text-white">38%</span>
+                    <span className="text-sm font-medium text-secondary">
+                      Avg brand recall uplift post-activation
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
+                    <span className="text-xl font-bold text-white">450</span>
+                    <span className="text-sm font-medium text-secondary">
+                      Student touchpoints per campus day
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
+                    <span className="text-xl font-bold text-white">100%</span>
+                    <span className="text-sm font-medium text-secondary">
+                      Campaigns tracked & reported on time
+                    </span>
+                  </div>
+                </div>
+              </div> */}
 
             <ul className="list-inside list-disc space-y-2 text-lg text-muted-foreground marker:text-secondary">
               <li>
                 <span className="text-slate-600">
-                  2,500+ direct consumer interactions per mall activation (average)
+                  <span className="font-semibold text-secondary">1,200+ </span>direct face-to-face consumer contacts per mall activation day — documented contacts, not estimated reach
                 </span>
               </li>
 
               <li>
                 <span className="text-slate-600">
-                  68% trial-to-purchase intent on product sampling campaigns
+                  <span className="font-semibold text-secondary">38% </span>average rise in unaided brand recall vs. pre-campaign consumer survey, across tracked Bangalore activations
                 </span>
               </li>
 
               <li>
                 <span className="text-slate-600">
-                  3.2x post-activation brand recall vs. pre-activation baseline
+                  <span className="font-semibold text-secondary"> 200-400 </span>direct student touchpoints per campus activation day — every interaction logged, not estimated
                 </span>
               </li>
-                        <li>
+              <li>
                 <span className="text-slate-600">
-                  200–400 campus touchpoints per college campaign day
-                </span>
-              </li>
-                        <li>
-                <span className="text-slate-600">
-                  100% location-specific targeting - we activate where your consumer is
-                </span>
-              </li>
-                        <li>
-                <span className="text-slate-600">
-                  Post-campaign data report - every activation is measured and reported
+                  <span className="font-semibold text-secondary">100% </span>of campaigns delivered with a location-specific, date-stamped report — every consumer contact documented
                 </span>
               </li>
             </ul>
@@ -600,11 +675,13 @@ export default function LandingPage() {
         >
           <div className="container relative z-10 mx-auto max-w-7xl space-y-8 px-4 text-center">
             <h2 className="font-headline text-4xl text-primary md:text-3xl">
-              Your Campaign Window Is Shorter Than You Think. Let's Build It Now
+              3 Q3 Slots Left. First Brief Gets the Best Locations.
             </h2>
 
             <p>
-              We're currently taking on 4 new activation campaigns for Q3 2026. Share your campaign brief and we'll respond with a strategy in 24 hours.
+              We cap new campaign onboarding each quarter to protect execution quality. 
+              3 of 5 Q3 2026Bangalore slots are confirmed. 
+              Share your brief — we respond with slot availability and a custom strategy in 24 hours.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -620,7 +697,7 @@ export default function LandingPage() {
                 size="lg"
                 className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto"
               >
-              WhatsApp Us Now
+              Check My Slot →
               </ScrollToLeadButton>
 
               {/* <ScrollToLeadButton
@@ -631,7 +708,9 @@ export default function LandingPage() {
                 Enquire Now
               </ScrollToLeadButton> */}
             </div>
-
+              <p className="text-xs text-muted-foreground">
+              WhatsApp or form — takes 90 seconds. We respond the same day.
+              </p>
             {/* <p className="text-sm text-muted-foreground">
               Don&apos;t wait to turn your brand&apos;s potential into
               performance.
@@ -650,20 +729,32 @@ export default function LandingPage() {
               <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                 <div className="space-y-6">
                   <h2 className="font-headline text-3xl text-primary">
-                    Are you ready to put your brand where it belongs?
+                    Your Consumer Is Outside. Is Your Brand?
                   </h2>
 
                   <p className="text-lg text-muted-foreground">
-                    Get expert retail branding strategies tailored to your store
-                    and brand goals.
+                    Share your brief. Get a free activation plan — 
+                    format, Bangalore locations, reach estimate, and budget guide. 
+                    <br /> <span className="font-bold text-secondary">In 24 hours. At zero cost.</span>
                   </p>
-
-                  <p className="text-base font-semibold text-secondary">
-                    BOOK A FREE CONSULTATION
-                  </p>
+                                <ScrollToLeadButton
+                size="lg"
+                className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto"
+              >
+              Get My Free Activation Plan →
+              </ScrollToLeadButton>
                 </div>
 
-                <LeadForm />
+              <LeadForm
+              title="Free Plan. 24 Hours."
+              subtitle="Share your brief and get a custom activation strategy within 24 hours."
+              buttonText="Send Brief — Get My Plan →"
+              bottomText={ <>
+                Free plan delivered in 24 working hours — no delays, no excuses
+                <br /> Your details are used only to build your plan — never shared
+                <br /> No sales pitch. Just your plan, built for your brand and budget.
+              </> }
+            /> 
               </div>
             </div>
           </div>
@@ -681,6 +772,7 @@ export default function LandingPage() {
           <ScrollToLeadButton className="h-12 flex-1 bg-secondary font-bold text-white">
             BOOK A FREE CONSULTATION
           </ScrollToLeadButton>
+          
         </div>
       </div>
     </div>

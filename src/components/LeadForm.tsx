@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -16,6 +16,14 @@ type FormValues = {
 
 type FormErrors = Partial<Record<keyof FormValues, string>> & {
   submit?: string
+}
+
+type LeadFormProps = {
+  className?: string
+  title?: string
+  subtitle?: string
+  buttonText?: string
+  bottomText?: React.ReactNode
 }
 
 const defaultValues: FormValues = {
@@ -49,7 +57,13 @@ function validateForm(values: FormValues) {
   return errors
 }
 
-export default function LeadForm({ className }: { className?: string }) {
+export default function LeadForm({
+  className,
+  title = "Plan Your Activation",
+  subtitle = "Let’s Build Your Activation Campaign.",
+  buttonText = "Get My Free Plan →",
+  bottomText = "Free plan delivered in 24 hours · No commitment · WhatsApp or email — your choice",
+}: LeadFormProps) {
   const [values, setValues] = useState<FormValues>(defaultValues)
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -119,11 +133,11 @@ export default function LeadForm({ className }: { className?: string }) {
       className={`rounded-xl border border-muted bg-white p-6 shadow-2xl md:p-8 ${className}`}
     >
       <h3 className="mb-2 text-2xl font-headline text-primary">
-        Let’s Build Your Activation Campaign
+        {title}
       </h3>
 
       <p className="mb-6 text-sm text-muted-foreground">
-       Let’s Build Your Activation Campaign.
+        {subtitle}
       </p>
 
       <form
@@ -261,9 +275,13 @@ export default function LeadForm({ className }: { className?: string }) {
               Processing...
             </>
           ) : (
-            "Get My Campaign Plan in 24 Hrs"
+            buttonText
           )}
         </Button>
+
+        <p className="text-center text-xs text-muted-foreground">
+          {bottomText}
+        </p>
       </form>
     </div>
   )
