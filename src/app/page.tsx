@@ -268,7 +268,7 @@ export default function LandingPage() {
           subtitle={
             <>
           Digital ads build awareness. On-ground activations build buyers.
-           We put your brand — physically — in the hands of your exact consumer. Mall floors. Society gates. Campus grounds. Tech park corridors.
+           We put your brand - physically - in the hands of your exact consumer. Mall floors. Society gates. Campus grounds. Tech park corridors.
             </>
           }
           centered={false}
@@ -279,9 +279,9 @@ export default function LandingPage() {
 
         <ul className="space-y-4">
           {[
-            "Bangalore's own on-ground activation team — no freelancers, no subcontracting",
+            "Bangalore's own on-ground activation team - no freelancers, no subcontracting",
             "1,200+ direct consumer contacts delivered per campaign (not reach, not impressions)",
-            "Every campaign tracked, photographed, and reported — zero ambiguity",
+            "Every campaign tracked, photographed, and reported - zero ambiguity",
           ].map((item) => (
             <li
               key={item}
@@ -327,13 +327,13 @@ export default function LandingPage() {
       <p className="text-lg leading-relaxed text-muted-foreground">
         While your competitor runs digital ads, your consumer is walking through Forum Mall, past an RWA
 gate in HSR, or through a tech park in Whitefield. On-ground activations meet buyers where they
-already are — in the moment before they decide.
+already are - in the moment before they decide.
       </p>
 
       <ul className="space-y-4">
         {[
           "3× higher first-trial conversion vs. digital-only campaigns [industry estimate]",
-          "Real conversations — not a 6-second pre-roll they skip",
+          "Real conversations - not a 6-second pre-roll they skip",
           "Brand recall that lasts weeks, not scroll-seconds",
           "Community trust that no retargeting pixel can replicate",
         ].map((item) => (
@@ -481,7 +481,7 @@ already are — in the moment before they decide.
           "Forum · Phoenix · Nexus · Orion · Elements",
           "800–1,200 direct consumer contacts/day",
           "Demo counters, sampling, brand experience zones",
-          "Permissions + manpower + setup — all handled",
+          "Permissions + manpower + setup - all handled",
           "Weekend premium + weekday budget slots",
         ],
         cta: "Plan My Mall Activation",
@@ -495,7 +495,7 @@ already are — in the moment before they decide.
           "RWAs · supermarkets · transit hubs · kirana clusters",
           "500–2,000 product trials per campaign day",
           "Consumer feedback captured post-trial",
-          "SKU-targeted — right product, right profile",
+          "SKU-targeted - right product, right profile",
           "Post-campaign trial + intent data report",
         ],
         cta: "Start My Sampling Campaign",
@@ -641,24 +641,28 @@ already are — in the moment before they decide.
             <ul className="list-inside list-disc space-y-2 text-lg text-muted-foreground marker:text-secondary">
               <li>
                 <span className="text-slate-600">
-                  <span className="font-semibold text-secondary">1,200+ </span>direct face-to-face consumer contacts per mall activation day — documented contacts, not estimated reach
+                  <span className="font-semibold text-secondary">1,200+ </span>direct face-to-face consumer contacts per mall activation day - documented contacts, 
+                  not estimated reach
                 </span>
               </li>
 
               <li>
                 <span className="text-slate-600">
-                  <span className="font-semibold text-secondary">38% </span>average rise in unaided brand recall vs. pre-campaign consumer survey, across tracked Bangalore activations
+                  <span className="font-semibold text-secondary">38% </span>average rise in unaided brand recall vs. pre-campaign consumer survey, 
+                  across tracked Bangalore activations
                 </span>
               </li>
 
               <li>
                 <span className="text-slate-600">
-                  <span className="font-semibold text-secondary"> 200-400 </span>direct student touchpoints per campus activation day — every interaction logged, not estimated
+                  <span className="font-semibold text-secondary"> 200-400 </span>direct student touchpoints per campus activation day - every interaction logged,
+                   not estimated
                 </span>
               </li>
               <li>
                 <span className="text-slate-600">
-                  <span className="font-semibold text-secondary">100% </span>of campaigns delivered with a location-specific, date-stamped report — every consumer contact documented
+                  <span className="font-semibold text-secondary">100% </span>of campaigns delivered with a location-specific, date-stamped report - 
+                  every consumer contact documented
                 </span>
               </li>
             </ul>
@@ -679,9 +683,9 @@ already are — in the moment before they decide.
             </h2>
 
             <p>
-              We cap new campaign onboarding each quarter to protect execution quality. 
-              3 of 5 Q3 2026Bangalore slots are confirmed. 
-              Share your brief — we respond with slot availability and a custom strategy in 24 hours.
+              We cap new campaign onboarding each quarter to protect execution quality. <br />
+              3 of 5 Q3 2026Bangalore slots are confirmed. <br />
+              Share your brief - we respond with slot availability and a custom strategy in 24 hours.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -709,7 +713,7 @@ already are — in the moment before they decide.
               </ScrollToLeadButton> */}
             </div>
               <p className="text-xs text-muted-foreground">
-              WhatsApp or form — takes 90 seconds. We respond the same day.
+              WhatsApp or form - takes 90 seconds. We respond the same day.
               </p>
             {/* <p className="text-sm text-muted-foreground">
               Don&apos;t wait to turn your brand&apos;s potential into
@@ -733,7 +737,7 @@ already are — in the moment before they decide.
                   </h2>
 
                   <p className="text-lg text-muted-foreground">
-                    Share your brief. Get a free activation plan — 
+                    Share your brief. Get a free activation plan - 
                     format, Bangalore locations, reach estimate, and budget guide. 
                     <br /> <span className="font-bold text-secondary">In 24 hours. At zero cost.</span>
                   </p>
@@ -750,9 +754,9 @@ already are — in the moment before they decide.
               subtitle="Share your brief and get a custom activation strategy within 24 hours."
               buttonText="Send Brief — Get My Plan →"
               bottomText={ <>
-                Free plan delivered in 24 working hours — no delays, no excuses
-                <br /> Your details are used only to build your plan — never shared
-                <br /> No sales pitch. Just your plan, built for your brand and budget.
+                Free custom plan in 24 working hours.
+                <br /> Your details stay private. No spam.
+                <br /> No sales pitch - just actionable ideas.
               </> }
             /> 
               </div>
