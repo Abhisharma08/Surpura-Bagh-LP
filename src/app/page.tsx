@@ -18,9 +18,8 @@ import SectionHeader from "@/components/SectionHeader";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export const metadata = {
-  title: "Innovative Branding Ideas | AD Vantage Integrated Marketing",
-  description:
-    "AD Vantage helping businesses to connect with customers in a meaningful way by being technology-enabled, data-driven, and creative marketing techniques.",
+  title: 'Brand Activation Agency in Bangalore | 500+ Activations | AD Vantage',
+  description: 'On-ground brand activations in Bangalore. Mall, sampling, campus & BTL. 80+ brands. 1,200+ consumer contacts/campaign. Get free plan in 24 hrs.',
 };
 
 const LOGO_URL =
