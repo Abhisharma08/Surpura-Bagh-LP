@@ -17,8 +17,9 @@ const belleza = Belleza({
 });
 
 export const metadata: Metadata = {
-  title: 'Brand Activation Agency in Bangalore | 500+ Activations | AD Vantage',
-  description: 'On-ground brand activations in Bangalore. Mall, sampling, campus & BTL. 80+ brands. 1,200+ consumer contacts/campaign. Get free plan in 24 hrs.',
+  title: "Luxury Resort in Jodhpur | Private Pool Suites | Surpura Bagh",
+  description:
+    "Experience slow luxury at Surpura Bagh, Jodhpur's boutique resort set across 28 acres of landscaped gardens.",
 };
 
 export default function RootLayout({

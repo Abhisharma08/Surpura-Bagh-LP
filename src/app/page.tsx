@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   MapPinned,
@@ -33,10 +36,12 @@ import ScrollToLeadButton from "@/components/ScrollToLeadButton";
 import SectionHeader from "@/components/SectionHeader";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
-export const metadata = {
-  title: 'Brand Activation Agency in Bangalore | 500+ Activations | AD Vantage',
-  description: 'On-ground brand activations in Bangalore. Mall, sampling, campus & BTL. 80+ brands. 1,200+ consumer contacts/campaign. Get free plan in 24 hrs.',
-};
+// export const metadata = {
+//   title:
+//     "Luxury Resort in Jodhpur | Private Pool Suites | Surpura Bagh",
+//   description:
+//     "Experience slow luxury at Surpura Bagh, Jodhpur's boutique resort set across 28 acres of landscaped gardens. Stay in private plunge-pool suites, enjoy curated dining, destination weddings, and personalised hospitality.",
+// };
 
 const LOGO_URL =
   "https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1916,h_1210,r_0,c_crop,q_80,dpr_1,f_auto,fl_progressive/w_355,h_200,f_auto,c_fit/surpura-bagh/surpura_png_13250d6a";
@@ -119,6 +124,29 @@ const STAYS = [
 ];
 
 export default function LandingPage() {
+  const [expandedCards, setExpandedCards] = useState<{[key: string]: boolean}>({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Set initial mobile state
+    setIsMobile(window.innerWidth < 768);
+
+    // Handle resize
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleCard = (title: string) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
+
   const RoomImg = PlaceHolderImages.find(
     (img) => img.id === "Room-Picture"
   );
@@ -595,12 +623,14 @@ export default function LandingPage() {
           }}
         >
           <CarouselContent className="-ml-4">
-            {STAYS.map((item) => (
+            {STAYS.map((item) => {
+              const isExpanded = expandedCards[item.title];
+              return (
               <CarouselItem key={item.title} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                 <Card className="rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden h-full flex flex-col bg-white">
                   <CardContent className="p-0 flex flex-col h-full">
                     {/* Image */}
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden cursor-pointer md:cursor-default" onClick={() => isMobile && toggleCard(item.title)}>
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -609,39 +639,54 @@ export default function LandingPage() {
                       />
                     </div>
 
-                    {/* Content */}
-                    <div className="p-8 flex flex-col h-full">
+                    {/* Content - Mobile Compact / Desktop Full */}
+                    <div className={`flex flex-col h-full transition-all duration-300 ${
+                      isExpanded || !isMobile ? 'p-8' : 'p-4 justify-center'
+                    }`}>
                       <h3 className="font-headline text-2xl font-semibold text-slate-900">
                         {item.title}
                       </h3>
 
-                      <p className="mt-4 text-slate-900 leading-7 italic">
-                        {item.description}
-                      </p>
+                      {/* Mobile: Show compact view initially */}
+                      {isExpanded || !isMobile ? (
+                        <>
+                          <p className="mt-4 text-slate-900 leading-7 italic">
+                            {item.description}
+                          </p>
 
-                      {/* Features */}
-                      <ul className="mt-6 space-y-3">
-                        {item.features.map((feature) => (
-                          <li key={feature} className="flex items-start gap-3">
-                            <ShieldCheck className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                            <span className="text-slate-900">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+                          {/* Features */}
+                          <ul className="mt-6 space-y-3">
+                            {item.features.map((feature) => (
+                              <li key={feature} className="flex items-start gap-3">
+                                <ShieldCheck className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                                <span className="text-slate-900">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
 
-                      {/* Button */}
-                      <div className="mt-auto pt-6">
-                        <ScrollToLeadButton
-                          className="w-full rounded-lg bg-primary px-6 py-4 text-base font-semibold text-white hover:bg-primary/90"
+                          {/* Button */}
+                          <div className="mt-auto pt-6">
+                            <ScrollToLeadButton
+                              className="w-full rounded-lg bg-primary px-6 py-4 text-base font-semibold text-white hover:bg-primary/90"
+                            >
+                              {item.button}
+                            </ScrollToLeadButton>
+                          </div>
+                        </>
+                      ) : (
+                        <button
+                          onClick={() => toggleCard(item.title)}
+                          className="mt-4 text-primary font-semibold hover:text-primary/80 text-left"
                         >
-                          {item.button}
-                        </ScrollToLeadButton>
-                      </div>
+                          Read More →
+                        </button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
               </CarouselItem>
-            ))}
+            );
+            })}
           </CarouselContent>
 
           {/* Carousel Controls */}

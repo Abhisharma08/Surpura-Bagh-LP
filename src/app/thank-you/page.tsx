@@ -1,7 +1,13 @@
+import type { Metadata } from 'next';
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, ArrowLeft } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Luxury Resort in Jodhpur | Private Pool Suites | Surpura Bagh",
+  description: "Experience slow luxury at Surpura Bagh, Jodhpur's boutique resort set across 28 acres of landscaped gardens. Stay in private plunge-pool suites, enjoy curated dining, destination weddings, and personalised hospitality.",
+};
 
 const LOGO_URL = "https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1916,h_1210,r_0,c_crop,q_80,dpr_1,f_auto,fl_progressive/w_355,h_200,f_auto,c_fit/surpura-bagh/surpura_png_13250d6a";
 
