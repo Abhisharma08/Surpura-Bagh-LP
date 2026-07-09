@@ -680,53 +680,6 @@ export default function LandingPage() {
 
         
         {/* CTA */}
-        <section
-          className="relative w-full overflow-hidden bg-white py-24"
-          style={deferredSectionStyle}
-        >
-          <SectionHeader
-            title={
-              <>
-                Ready to Experience Surpura Bagh?  
-              </>
-            }
-            subtitle=""
-            centered
-          />
-            <div className="container relative z-10 mx-auto max-w-7xl space-y-8 px-4 text-center">
-
-              <p className="mx-auto max-w-3xl text-base italic leading-loose text-slate-900 md:text-lg">
-                Escape to a boutique retreat where luxury, nature, and personalised hospitality come together. 
-                Whether you're planning a relaxing getaway, a destination wedding, 
-                or a memorable celebration, we're here to create an experience tailored just for you.
-              </p>
-
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-
-              <ScrollToLeadButton
-                size="lg"
-                className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto"
-              >
-              Book Your Stay at Surpura Bagh
-              </ScrollToLeadButton>
-
-              {/* <ScrollToLeadButton
-                variant="outline"
-                size="lg"
-                className="h-14 border-primary px-10 text-lg text-primary hover:bg-primary/5 sm:w-auto"
-              >
-                Enquire Now
-              </ScrollToLeadButton> */}
-            </div>
-              <p className="text-xs text-muted-foreground italic text-slate-600">
-              Complete the form below, and our team will get in touch to assist with your reservation and travel plans.
-              </p>
-            {/* <p className="text-sm text-muted-foreground">
-              Don&apos;t wait to turn your brand&apos;s potential into
-              performance.
-            </p> */}
-          </div>
-        </section>
 
         {/* FINAL CTA */}
         <section
