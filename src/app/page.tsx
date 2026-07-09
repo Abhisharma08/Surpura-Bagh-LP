@@ -37,10 +37,8 @@ import SectionHeader from "@/components/SectionHeader";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 // export const metadata = {
-//   title:
-//     "Luxury Resort in Jodhpur | Private Pool Suites | Surpura Bagh",
-//   description:
-//     "Experience slow luxury at Surpura Bagh, Jodhpur's boutique resort set across 28 acres of landscaped gardens. Stay in private plunge-pool suites, enjoy curated dining, destination weddings, and personalised hospitality.",
+//   title: "Luxury Resort in Jodhpur | Private Pool Suites | Surpura Bagh",
+//   description: "Experience slow luxury at Surpura Bagh, Jodhpur's boutique resort set across 28 acres of landscaped gardens. Stay in private plunge-pool suites, enjoy curated dining, destination weddings, and personalised hospitality.",
 // };
 
 const LOGO_URL =
@@ -124,7 +122,7 @@ const STAYS = [
 ];
 
 export default function LandingPage() {
-  const [expandedCards, setExpandedCards] = useState<{[key: string]: boolean}>({});
+  const [allCardsExpanded, setAllCardsExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -140,12 +138,11 @@ export default function LandingPage() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const toggleCard = (title: string) => {
-    setExpandedCards(prev => ({
-      ...prev,
-      [title]: !prev[title]
-    }));
+  const expandAllCards = () => {
+    setAllCardsExpanded(true);
   };
+
+  const showExpandedStayCards = allCardsExpanded || !isMobile;
 
   const RoomImg = PlaceHolderImages.find(
     (img) => img.id === "Room-Picture"
@@ -624,68 +621,68 @@ export default function LandingPage() {
         >
           <CarouselContent className="-ml-4">
             {STAYS.map((item) => {
-              const isExpanded = expandedCards[item.title];
               return (
-              <CarouselItem key={item.title} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                <Card className="rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden h-full flex flex-col bg-white">
-                  <CardContent className="p-0 flex flex-col h-full">
-                    {/* Image */}
-                    <div className="relative aspect-[4/3] overflow-hidden cursor-pointer md:cursor-default" onClick={() => isMobile && toggleCard(item.title)}>
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+                <CarouselItem key={item.title} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                  <Card className="rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden h-full flex flex-col bg-white">
+                    <CardContent className="p-0 flex flex-col h-full">
+                      {/* Image */}
+                      <div className="relative aspect-[4/3] overflow-hidden cursor-pointer md:cursor-default" onClick={() => isMobile && expandAllCards()}>
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
 
-                    {/* Content - Mobile Compact / Desktop Full */}
-                    <div className={`flex flex-col h-full transition-all duration-300 ${
-                      isExpanded || !isMobile ? 'p-8' : 'p-4 justify-center'
-                    }`}>
-                      <h3 className="font-headline text-2xl font-semibold text-slate-900">
-                        {item.title}
-                      </h3>
+                      {/* Content - mobile expands all cards together; desktop stays expanded */}
+                      <div className={`flex flex-col h-full transition-all duration-300 ${
+                        showExpandedStayCards ? 'p-8' : 'p-4 justify-center'
+                      }`}>
+                        <h3 className="font-headline text-2xl font-semibold text-slate-900">
+                          {item.title}
+                        </h3>
 
-                      {/* Mobile: Show compact view initially */}
-                      {isExpanded || !isMobile ? (
-                        <>
-                          <p className="mt-4 text-slate-900 leading-7 italic">
-                            {item.description}
-                          </p>
+                        {/* Mobile: Show compact view initially */}
+                        {showExpandedStayCards ? (
+                          <>
+                            <p className="mt-4 text-slate-900 leading-7 italic">
+                              {item.description}
+                            </p>
 
-                          {/* Features */}
-                          <ul className="mt-6 space-y-3">
-                            {item.features.map((feature) => (
-                              <li key={feature} className="flex items-start gap-3">
-                                <ShieldCheck className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                                <span className="text-slate-900">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
+                            {/* Features */}
+                            <ul className="mt-6 space-y-3">
+                              {item.features.map((feature) => (
+                                <li key={feature} className="flex items-start gap-3">
+                                  <ShieldCheck className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                                  <span className="text-slate-900">{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
 
-                          {/* Button */}
-                          <div className="mt-auto pt-6">
-                            <ScrollToLeadButton
-                              className="w-full rounded-lg bg-primary px-6 py-4 text-base font-semibold text-white hover:bg-primary/90"
-                            >
-                              {item.button}
-                            </ScrollToLeadButton>
-                          </div>
-                        </>
-                      ) : (
-                        <button
-                          onClick={() => toggleCard(item.title)}
-                          className="mt-4 text-primary font-semibold hover:text-primary/80 text-left"
-                        >
-                          Read More →
-                        </button>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            );
+                            {/* Button */}
+                            <div className="mt-auto pt-6">
+                              <ScrollToLeadButton
+                                className="w-full rounded-lg bg-primary px-6 py-4 text-base font-semibold text-white hover:bg-primary/90"
+                              >
+                                {item.button}
+                              </ScrollToLeadButton>
+                            </div>
+                          </>
+                        ) : (
+                          <button
+                            onClick={() => expandAllCards()}
+                            aria-expanded={showExpandedStayCards}
+                            className="mt-4 text-primary font-semibold hover:text-primary/80 text-left"
+                          >
+                            Read More →
+                          </button>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              );
             })}
           </CarouselContent>
 
