@@ -135,10 +135,10 @@ export default function LandingPage() {
     <div className="flex min-h-screen flex-col overflow-x-hidden">
       <nav className="fixed top-0 z-50 w-full overflow-x-hidden border-b bg-white/95 shadow-sm backdrop-blur-md">
         <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
-          <div className="flex items-center gap-2" aria-label="AD Vantage Logo">
+          <div className="flex items-center gap-2" aria-label="Surpura Bagh Logo">
             <Image
               src={LOGO_URL}
-              alt="AD Vantage Logo"
+              alt="Surpura Bagh Logo"
               width={200}
               height={50}
               className="h-20 w-auto object-contain"
@@ -192,7 +192,7 @@ export default function LandingPage() {
           hospitality come together for unforgettable stays.
         </p>
 
-        <div className="flex flex-wrap gap-4">
+        {/* <div className="flex flex-wrap gap-4">
 
           <ScrollToLeadButton className="bg-primary px-8 py-6 text-base font-semibold text-white hover:bg-primary/90">
             Book Your Stay
@@ -205,7 +205,7 @@ export default function LandingPage() {
             Explore More
           </ScrollToLeadButton>
 
-        </div>
+        </div> */}
 
         {/* STATS */}
 
@@ -753,17 +753,16 @@ export default function LandingPage() {
                 size="lg"
                 className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto italic "
               >
-              Get My Free Activation Plan →
+              Book Your Stay at Surpura Bagh
               </ScrollToLeadButton>
                 </div>
 
               <LeadForm
-              title="Free Plan. 24 Hours."
-              subtitle="Share your brief and get a custom activation strategy within 24 hours."
-              buttonText="Send Brief — Get My Plan →"
+              title="Book Your Stay at Surpura Bagh"
+              subtitle="Complete the form below, and our team will get in touch to assist with your reservation and travel plans."
+              buttonText=" Enquire Now"
               buttonclassName="italic tracking-wide"
               bottomText={ <>
-                Free custom plan in 24 working hours.
               </> }
             /> 
               </div>
@@ -774,7 +773,7 @@ export default function LandingPage() {
 
       <footer className="w-full bg-primary pb-28 pt-8 text-white lg:py-8">
         <div className="container mx-auto max-w-7xl px-4 text-center text-xs text-white/60">
-          <p>©2026 AD Vantage Integrated Marketing All Rights Reserved.</p>
+          <p>©2026 Surpura Bagh All Rights Reserved.</p>
         </div>
       </footer>
 

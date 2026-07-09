@@ -10,7 +10,6 @@ type FormValues = {
   name: string
   email: string
   phone: string
-  city: string
   lead_source: string
 }
 
@@ -31,8 +30,7 @@ const defaultValues: FormValues = {
   name: "",
   email: "",
   phone: "",
-  city: "",
-  lead_source: "Brand Activation lp",
+  lead_source: "Surpura Bagh",
 }
 
 function validateForm(values: FormValues) {
@@ -49,10 +47,6 @@ function validateForm(values: FormValues) {
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
     errors.email = "Please enter a valid email address."
-  }
-
-  if (values.city.trim().length < 2) {
-    errors.city = "Please enter your city."
   }
 
   return errors
@@ -232,32 +226,6 @@ export default function LeadForm({
               </p>
             ) : null}
           </div>
-        </div>
-
-        {/* City */}
-        <div className="space-y-1.5">
-          <label
-            htmlFor="city"
-            className="text-sm font-medium text-foreground"
-          >
-            City
-          </label>
-
-          <input
-            id="city"
-            name="city"
-            value={values.city}
-            onChange={handleChange}
-            placeholder="Your City"
-            autoComplete="address-level2"
-            className="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-          />
-
-          {errors.city ? (
-            <p className="text-sm text-destructive">
-              {errors.city}
-            </p>
-          ) : null}
         </div>
 
         {errors.submit ? (
