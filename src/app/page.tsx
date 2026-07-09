@@ -13,6 +13,10 @@ import {
   Heart,
   Smile,
   Amphora,
+  Trees,
+  Home,
+  ChefHat,
+  Users,
 } from "lucide-react";
 import {
   Carousel,
@@ -209,44 +213,48 @@ export default function LandingPage() {
 
         {/* STATS */}
 
-        <div className="grid grid-cols-2 gap-4 pt-8 lg:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-8">
 
-          <div className="rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
-            <h3 className="text-2xl font-bold text-white">
+          <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
+            <Trees className="h-7 w-7 text-white mb-1.5" />
+            <h3 className="text-base font-bold text-white">
               28 Acres
             </h3>
 
-            <p className="mt-2 text-sm text-white/80">
+            <p className="mt-0.5 text-xs text-white/80">
               Landscaped Gardens
             </p>
           </div>
 
-          <div className="rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
-            <h3 className="text-2xl font-bold text-white">
+          <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
+            <Home className="h-7 w-7 text-white mb-1.5" />
+            <h3 className="text-base font-bold text-white">
               Private Suites
             </h3>
 
-            <p className="mt-2 text-sm text-white/80">
+            <p className="mt-0.5 text-xs text-white/80">
               Plunge Pool Experiences
             </p>
           </div>
 
-          <div className="rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
-            <h3 className="text-2xl font-bold text-white">
+          <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
+            <ChefHat className="h-7 w-7 text-white mb-1.5" />
+            <h3 className="text-base font-bold text-white">
               3 Dining Venues
             </h3>
 
-            <p className="mt-2 text-sm text-white/80">
+            <p className="mt-0.5 text-xs text-white/80">
               Curated Dining
             </p>
           </div>
 
-          <div className="rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
-            <h3 className="text-2xl font-bold text-white">
+          <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
+            <Users className="h-7 w-7 text-white mb-1.5" />
+            <h3 className="text-base font-bold text-white">
               3,000+ Guests
             </h3>
 
-            <p className="mt-2 text-sm text-white/80">
+            <p className="mt-0.5 text-xs text-white/80">
               Event Capacity
             </p>
           </div>
@@ -262,6 +270,7 @@ export default function LandingPage() {
           title="Book Your Stay at Surpura Bagh"
           subtitle="Complete the form below, and our team will get in touch to assist with your reservation and travel plans."
           buttonText="Book Your Stay"
+          className="max-w-sm mx-auto py-8"
         />
       </div>
 
@@ -691,7 +700,7 @@ export default function LandingPage() {
             <div className="mx-auto max-w-4xl">
               <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                 <div className="space-y-6">
-                  <h2 className="font-headline text-4xl text-primary mb-2 font-headline font-bold">
+                  <h2 className="font-headline text-4xl text-white mb-2 font-headline font-bold">
                     Ready to Experience Surpura Bagh?
                   </h2>
 
@@ -704,7 +713,7 @@ export default function LandingPage() {
                   </p>
                   <ScrollToLeadButton
                 size="lg"
-                className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto italic "
+                className="h-14 w-full bg-primary px-10 text-lg font-bold text-white hover:bg-primary/90 sm:w-auto italic "
               >
               Book Your Stay at Surpura Bagh
               </ScrollToLeadButton>

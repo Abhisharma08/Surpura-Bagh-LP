@@ -54,11 +54,11 @@ function validateForm(values: FormValues) {
 
 export default function LeadForm({
   className,
-  title = "Plan Your Activation",
-  subtitle = "Let’s Build Your Activation Campaign.",
-  buttonText = "Get My Free Plan →",
+  title = "",
+  subtitle = "",
+  buttonText = "",
   buttonclassName ="",
-  bottomText = "Free plan delivered in 24 hours · No commitment · WhatsApp or email — your choice",
+  bottomText = "",
 }: LeadFormProps) {
   const [values, setValues] = useState<FormValues>(defaultValues)
   const [errors, setErrors] = useState<FormErrors>({})
@@ -128,11 +128,11 @@ export default function LeadForm({
     <div
       className={`rounded-xl border border-muted bg-white p-6 shadow-2xl md:p-8 ${className}`}
     >
-      <h3 className="mb-2 text-4xl font-headline font-bold text-secondary">
+      <h3 className="mb-2 text-4xl font-headline font-bold text-slate-900">
         {title}
       </h3>
 
-      <p className="mb-6 text-sm text-muted-foreground">
+      <p className="mb-6 text-sm text-slate-900 text-muted-foreground">
         {subtitle}
       </p>
 
@@ -151,7 +151,7 @@ export default function LeadForm({
         <div className="space-y-1.5">
           <label
             htmlFor="name"
-            className="text-sm font-medium text-foreground"
+            className="text-sm font-medium text-slate-900"
           >
             Full Name
           </label>
@@ -174,11 +174,11 @@ export default function LeadForm({
         </div>
 
         {/* Phone + Email */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="space-y-4">
           <div className="space-y-1.5">
             <label
               htmlFor="phone"
-              className="text-sm font-medium text-foreground"
+              className="text-sm font-medium text-slate-900"
             >
               Phone Number
             </label>
@@ -204,7 +204,7 @@ export default function LeadForm({
           <div className="space-y-1.5">
             <label
               htmlFor="email"
-              className="text-sm font-medium text-foreground"
+              className="text-sm font-medium text-slate-900"
             >
               Email Address
             </label>
@@ -236,7 +236,7 @@ export default function LeadForm({
 
         <Button
           type="submit"
-          className={`h-14 w-full bg-secondary text-lg font-bold text-white hover:bg-secondary/90 ${buttonclassName}`}
+          className={`h-14 w-full bg-primary text-lg font-bold text-white hover:bg-primary/90 mt-8 ${buttonclassName}`}
           disabled={isSubmitting}
         >
           {isSubmitting ? (
