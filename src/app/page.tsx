@@ -8,7 +8,19 @@ import {
   GraduationCap,
   Sparkles,
   Subtitles,
+  UtensilsCrossed,
+  Leaf,
+  Heart,
+  Smile,
+  Amphora,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -23,21 +35,95 @@ export const metadata = {
 };
 
 const LOGO_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778668639/advlogo_qq9f92.png";
+  "https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1916,h_1210,r_0,c_crop,q_80,dpr_1,f_auto,fl_progressive/w_355,h_200,f_auto,c_fit/surpura-bagh/surpura_png_13250d6a";
 
 const HERO_BG_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778674606/hero_qkgfwb.webp";
+  "https://assets.simplotel.com/simplotel/image/upload/w_3333,h_5000/x_0,y_1760,w_3333,h_1480,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/outdoor-dining-setup";
 
 const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
+const STAYS = [
+  {
+    title: "Private Plunge Pool Suites",
+    description:
+      "Experience complete privacy in spacious suites featuring your own plunge pool, handcrafted interiors, and tranquil outdoor spaces.",
+    image: "https://assets.simplotel.com/simplotel/image/upload/x_116,y_0,w_1058,h_794,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/IMG_6057",
+    button: "Book Now →",
+    features: [
+      "Private plunge pool",
+      "Spacious luxury interiors",
+      "Artisan-crafted furnishings",
+      "Perfect for couples & celebrations",
+    ],
+  },
+
+  {
+    title: "Garden-Facing Cottages",
+    description:
+      "Wake up to lush greenery and unwind in thoughtfully designed cottages that bring you closer to nature.",
+    image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/couple-dining-1",
+    button: "Book Now →",
+    features: [
+      "Garden views",
+      "Private sit-out",
+      "Peaceful surroundings",
+      "Family-friendly stay",
+    ],
+  },
+
+  {
+    title: "Luxury Tent Suites",
+    description:
+      "Experience the charm of luxury camping with elegant tent suites that combine outdoor living with modern comforts.",
+    image: "https://assets.simplotel.com/simplotel/image/upload/x_219,y_0,w_3498,h_2624,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/outdoor-dining-area",
+    button: "Book Now →",
+    features: [
+      "Luxury glamping experience",
+      "Contemporary amenities",
+      "Spacious interiors",
+      "Unique stay experience",
+    ],
+  },
+
+  {
+    title: "Weddings & Celebrations",
+    description:
+      "Celebrate life's biggest moments with expansive lawns, elegant venues, and personalised event planning.",
+    image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/beae395c-7b46-4f00-9d2e-def0ea401c81_99097059",
+    button: "Enquire Now →",
+    features: [
+      "Up to 3,000 guests",
+      "Multiple event venues",
+      "Wedding accommodation",
+      "Dedicated planning support",
+    ],
+  },
+
+  {
+    title: "Corporate Retreats",
+    description:
+      "Host productive meetings, team outings, and corporate events in a peaceful setting surrounded by nature.",
+    image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/couple-dining-1",
+    button: "Enquire Now →",
+    features: [
+      "Team retreats",
+      "Corporate events",
+      "Luxury accommodation",
+      "Curated dining experiences",
+    ],
+  },
+];
 
 export default function LandingPage() {
-  const studentImg = PlaceHolderImages.find(
-    (img) => img.id === "student-work"
+  const RoomImg = PlaceHolderImages.find(
+    (img) => img.id === "Room-Picture"
   );
 
-  const brandingImg = PlaceHolderImages.find(
-    (img) => img.id === "branding-mockup"
+  const OutDoorImg = PlaceHolderImages.find(
+    (img) => img.id === "OutDoor-Design"
+  );
+  const OutDoorArielImg = PlaceHolderImages.find(
+    (img) => img.id === "OutDoorAriel-Design"
   );
 
   const deferredSectionStyle = {
@@ -55,602 +141,543 @@ export default function LandingPage() {
               alt="AD Vantage Logo"
               width={200}
               height={50}
-              className="h-10 w-auto object-contain"
+              className="h-20 w-auto object-contain"
               priority
               quality={60}
             />
           </div>
 
           <div className="flex items-center gap-4">
-            <ScrollToLeadButton className="bg-secondary px-6 font-bold text-white hover:bg-secondary/90">
-             Get Free Plan
+            <ScrollToLeadButton className="bg-primary px-6 font-bold text-white hover:bg-primary/90">
+             Book Your Stay
             </ScrollToLeadButton>
           </div>
         </div>
       </nav>
 
       <main className="w-full pb-24 pt-20 lg:pb-0">
-        {/* HERO SECTION */}
-        <section className="relative w-full overflow-hidden bg-primary py-20 lg:py-20">
-          <div className="absolute inset-0">
-            <Image
-              src={HERO_BG_URL}
-              alt="Retail Branding"
-              fill
-              className="object-cover"
-              priority
-              fetchPriority="high"
-              quality={60}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/75" />
+{/* HERO SECTION */}
+<section className="relative w-full overflow-hidden py-24 lg:py-32">
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src={HERO_BG_URL}
+      alt="Surpura Bagh"
+      fill
+      priority
+      className="object-cover"
+      quality={70}
+    />
 
-          <div className="container relative z-10 mx-auto max-w-7xl px-4">
-            <div className="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
-              <div className="w-full space-y-6 text-white">
-                <h1 className="font-headline text-4xl leading-tight text-secondary font-bold drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:text-5xl">
-                  Bangalore Sees Your Brand. <br /> Not Just Your Ad.
-                </h1>
+    {/* Dark Overlay */}
+    <div className="absolute inset-0 bg-black/55" />
+  </div>
 
-                <p className="max-w-xl text-lg text-white">
-                On-ground brand activations across Koramangala, Whitefield, HSR, Indiranagar and Hebbal. <br />
-                1,200+ direct consumer contacts. Every campaign. Every time.
-                </p>
+  <div className="container relative z-10 mx-auto max-w-7xl px-4">
+    <div className="grid items-center gap-16 lg:grid-cols-2">
 
-                {/* <div className="flex max-w-2xl flex-wrap gap-2">
-                  {[
-                    "Retail Branding Specialist",
-                    "Store & Franchise Outlet Branding",
-                    "Trusted by 100+ brands",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/12 px-3 py-1.5 text-sm font-semibold text-white shadow-[0_6px_14px_rgba(0,0,0,0.2)]"
-                    >
-                      <Star className="h-3.5 w-3.5 shrink-0 text-secondary" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div> */}
+      {/* LEFT CONTENT */}
 
-                {/* <div className="flex max-w-2xl flex-wrap gap-3">
-                  {[
-                    "Retail Experience Design",
-                    "Visual Merchandising",
-                    "Materials & Fabrications",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="inline-flex items-center gap-2 rounded-full border border-secondary bg-secondary px-4 py-2 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(219,52,54,0.35)]"
-                    >
-                      <ShieldCheck className="h-4 w-4 shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div> */}
+      <div className="space-y-8 text-white">
 
-              {/* TRUST BADGES */}
-              <div className="mt-6 overflow-hidden rounded-xl border border-white/10 bg-primary/90 shadow-xl backdrop-blur-sm">
-                <div className="grid grid-cols-2 divide-x divide-y divide-white/10 md:grid-cols-4 md:divide-y-0">
+        <h1 className="font-headline text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
+          Experience Jodhpur&apos;s Most Peaceful Luxury Resort
+        </h1>
 
-                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-secondary">500+</span>
-                    <span className="text-sm font-medium text-white/80">
-                      Activations
-                    </span>
-                  </div>
+        <p className="max-w-2xl text-lg leading-8 text-white/90 italic">
+          Experience slow luxury across 28 acres of landscaped gardens with
+          private plunge-pool suites, curated dining experiences, and grand
+          celebration spaces. Where nature, privacy, and personalised
+          hospitality come together for unforgettable stays.
+        </p>
 
-                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-secondary">80+</span>
-                    <span className="text-sm font-medium text-white/80">
-                      Brands
-                    </span>
-                  </div>
+        <div className="flex flex-wrap gap-4">
 
-                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-secondary">48 Hr</span>
-                    <span className="text-sm font-medium text-white/80">
-                      Plan Turnaround
-                    </span>
-                  </div>
+          <ScrollToLeadButton className="bg-primary px-8 py-6 text-base font-semibold text-white hover:bg-primary/90">
+            Book Your Stay
+          </ScrollToLeadButton>
 
-                  <div className="flex flex-col items-center justify-center px-4 py-4 text-center">
-                    <span className="text-xl font-bold text-secondary">Zero</span>
-                    <span className="text-sm font-medium text-white/80">
-                      Subcontracting
-                    </span>
-                  </div>
-
-                  {/* <p className="col-span-full mt-4 text-xs text-white/70 text-center">
-                    AD Vantage Integrated Marketing · advanintegrated.in · Landing Page — Final Copy · Prepared by Contentify Tech ·
-                    <br />
-                    contentify.co.in
-                  </p> */}
-                </div>
-              </div>               
-              </div>
-
-              <div id="lead-form-top">
-                <LeadForm />
-              </div>
-            </div>
-          </div>
-        </section>
-
-          {/* CLIENTS */}
-          <section
-            className="w-full overflow-hidden bg-muted py-14"
-            style={deferredSectionStyle}
+          <ScrollToLeadButton
+            variant="outline"
+            className="border-white bg-transparent px-8 py-6 text-base text-white hover:bg-white hover:text-black"
           >
-            <div className="container mx-auto max-w-7xl px-4 text-center">
-              
-            <div className="flex flex-col items-center">
-            <h2 className="mb-3 text-4xl font-bold text-primary">
-              BRANDS ACTIVATED ACROSS BANGALORE
-            </h2>
+            Explore More
+          </ScrollToLeadButton>
 
-            <div className="h-1 w-72 rounded-full bg-secondary" />
+        </div>
+
+        {/* STATS */}
+
+        <div className="grid grid-cols-2 gap-4 pt-8 lg:grid-cols-4">
+
+          <div className="rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+            <h3 className="text-2xl font-bold text-white">
+              28 Acres
+            </h3>
+
+            <p className="mt-2 text-sm text-white/80">
+              Landscaped Gardens
+            </p>
           </div>
 
-              {/* <h2 className="mb-3 text-4xl font-bold text-primary">
-                BRANDS ACTIVATED ACROSS BANGALORE
-              </h2> */}
+          <div className="rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+            <h3 className="text-2xl font-bold text-white">
+              Private Suites
+            </h3>
 
-              <p className="mx-auto my-5 mb-10 max-w-2xl text-muted-foreground italic">
-                500+ on-ground activations. 80+ brands. FMCG · D2C · Real Estate · Retail · EdTech
-              </p>
+            <p className="mt-2 text-sm text-white/80">
+              Plunge Pool Experiences
+            </p>
+          </div>
 
-              {/* LOGO MARQUEE */}
-              <div className="relative overflow-hidden">
-                
-                {/* LEFT FADE */}
-                <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-white to-transparent" />
+          <div className="rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+            <h3 className="text-2xl font-bold text-white">
+              3 Dining Venues
+            </h3>
 
-                {/* RIGHT FADE */}
-                <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white to-transparent" />
+            <p className="mt-2 text-sm text-white/80">
+              Curated Dining
+            </p>
+          </div>
 
-                <div className="flex w-max animate-[marquee_28s_linear_infinite] items-center gap-16">
-                  
-                  {[
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839836/wipro_c4vtlh.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839845/raymond_uqgbc9.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839849/jbl-logo_ytljd0.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839851/hul_upiizw.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839854/hewlet_v97taj.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839856/ariseNshine_fwmfxw.webp",
+          <div className="rounded-xl border border-white/20 bg-white/10 p-5 backdrop-blur-md">
+            <h3 className="text-2xl font-bold text-white">
+              3,000+ Guests
+            </h3>
 
+            <p className="mt-2 text-sm text-white/80">
+              Event Capacity
+            </p>
+          </div>
 
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839836/wipro_c4vtlh.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839845/raymond_uqgbc9.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839849/jbl-logo_ytljd0.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839851/hul_upiizw.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839854/hewlet_v97taj.webp",
-                    "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1778839856/ariseNshine_fwmfxw.webp",
-                  ].map((logo, index) => (
-                    <div
-                      key={index}
-                      className="flex h-24 w-44 items-center justify-center rounded-2xl border border-muted bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                    >
-                      <Image
-                        src={logo}
-                        alt={`Client Logo ${index + 1}`}
-                        width={140}
-                        height={70}
-                        className="h-auto max-h-12 w-auto object-contain transition duration-300 hover:scale-105"            />
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-4 text-xs italic font-medium tracking-wide text-muted-foreground">
-                  Join 80+ brands that chose on-ground over online
-                </p>
-              </div>
-            </div>
-          </section>
+        </div>
 
-{/* ABOUT */}
-<section
-  className="w-full bg-white py-20"
-  style={deferredSectionStyle}
->
-  <div className="container mx-auto max-w-7xl px-4">
-    <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
-
-      {/* IMAGE */}
-      <div className="order-2 relative h-[400px] overflow-hidden rounded-2xl shadow-2xl lg:order-1">
-        <Image
-          src={studentImg?.imageUrl || DEFAULT_PLACEHOLDER}
-          alt="Retail Branding"
-          fill
-          className="object-cover"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-        />
       </div>
 
-      {/* CONTENT */}
-      <div className="order-1 space-y-6 lg:order-2">
-        <SectionHeader
-          title="Your Ad Got the Click. Did They Actually Buy?"
-          subtitle={
-          <></>
-          }
-          centered={false}
+      {/* RIGHT */}
+
+      <div id="lead-form-top">
+        <LeadForm
+          title="Book Your Stay at Surpura Bagh"
+          subtitle="Complete the form below, and our team will get in touch to assist with your reservation and travel plans."
+          buttonText="Book Your Stay"
         />
-        <p className=" text-lg leading-relaxed italic text-slate-900">
-          Digital ads build awareness. On-ground activations build buyers.
-           We put your brand - physically - in the hands of your exact consumer. Mall floors. Society gates. Campus grounds. Tech park corridors.
-        </p>
-        <p className="mt-2 text-lg leading-relaxed text-primary">
-          Executed on-ground. Measured every day. Reported after every campaign.
-        </p>
-
-        <ul className="space-y-4">
-          {[
-            "Bangalore's own on-ground activation team - no freelancers, no subcontracting",
-            "1,200+ direct consumer contacts delivered per campaign (not reach, not impressions)",
-            "Every campaign tracked, photographed, and reported - zero ambiguity",
-          ].map((item) => (
-            <li
-              key={item}
-              className="flex items-center gap-3 font-medium text-primary"
-            >
-              <ShieldCheck className="h-6 w-6 text-secondary" />
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        {/* <p className="mt-4 inline-block border-b-2 border-secondary pb-1 text-lg font-bold text-primary">
-          We don’t just run campaigns, we create experiences consumers remember.
-        </p> */}
       </div>
 
     </div>
   </div>
 </section>
 
-{/* BRAND IMPACT */}
+{/* ABOUT */}
 <section
-  className="w-full bg-muted py-20"
+  className="w-full bg-[#FFF9F3] py-24"
   style={deferredSectionStyle}
 >
   <div className="container mx-auto max-w-7xl px-4">
+
+    {/* ---------- FIRST BLOCK ---------- */}
+
     <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
 
+      {/* IMAGE */}
+
+      <div className="relative order-2 h-[520px] overflow-hidden rounded-2xl shadow-2xl lg:order-1">
+        <Image
+          src={RoomImg?.imageUrl || DEFAULT_PLACEHOLDER}
+          alt="Surpura Bagh"
+          fill
+          className="object-cover"
+          sizes="(max-width:1024px) 100vw, 50vw"
+        />
+      </div>
+
       {/* CONTENT */}
-      <div className="order-1 space-y-6 lg:order-1">
+
+      <div className="order-1 space-y-7 lg:order-2">
+
         <SectionHeader
-          title={
-          <>
-         They're Outside. Are You?
-          </>
-          }
+          title="Where Nature, Luxury & Hospitality Come Together"
           subtitle=""
           centered={false}
         />
 
-      <div className="space-y-4">
+        <p className="text-lg leading-8 text-slate-900 italic">
+          At Surpura Bagh, every stay is thoughtfully crafted to offer comfort,
+          privacy, and meaningful experiences amidst 28 acres of landscaped
+          gardens.
+        </p>
 
-      <p className="text-lg leading-relaxed italic text-slate-900">
-        While your competitor runs digital ads, your consumer is walking through Forum Mall, past an RWA
-gate in HSR, or through a tech park in Whitefield. On-ground activations meet buyers where they
-already are - in the moment before they decide.
-      </p>
+        <ul className="space-y-5">
 
-      <ul className="space-y-4">
-        {[
-          "3× higher first-trial conversion vs. digital-only campaigns [industry estimate]",
-          "Real conversations - not a 6-second pre-roll they skip",
-          "Brand recall that lasts weeks, not scroll-seconds",
-          "Community trust that no retargeting pixel can replicate",
-        ].map((item) => (
-          <li
-            key={item}
-            className="flex items-center gap-3 font-medium text-primary"
-          >
-            <ShieldCheck className="h-6 w-6 text-secondary" />
-            {item}
-          </li>
-        ))}
-      </ul>
-            <div className="space-y-4">
+          {[
+            "Private plunge-pool suites for complete relaxation",
+            "Thoughtfully designed accommodations crafted by regional artisans",
+            "Curated dining experiences across three unique venues",
+          ].map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-4"
+            >
+              <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-primary" />
 
-      <p className="text-lg leading-relaxed italic text-slate-900">
-        The right activation doesn't just build a brand. It builds the consumer who chooses your brand first
-      </p>
+              <span className="text-lg text-slate-900">
+                {item}
+              </span>
+            </li>
+          ))}
+
+        </ul>
+
+        <p className="text-lg leading-8 text-slate-900 italic">
+          More than a resort, it's a destination for memorable stays and
+          celebrations.
+        </p>
+
+        <p className="text-lg leading-8 text-slate-900 italic">
+          Whether you're escaping for a weekend, celebrating a special occasion,
+          or planning a grand event, Surpura Bagh offers the perfect balance of
+          luxury, nature, and personalised hospitality.
+        </p>
+
       </div>
 
     </div>
+
+    {/* ---------- SECOND BLOCK ---------- */}
+
+    <div className="mt-28 grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+
+      {/* CONTENT */}
+
+      <div className="space-y-7">
+
+        <SectionHeader
+          title="Stay Experiences Designed Around You"
+          subtitle=""
+          centered={false}
+        />
+
+        <p className="text-lg leading-8 text-slate-900 italic">
+          Every stay at Surpura Bagh is thoughtfully curated to offer comfort,
+          privacy, and memorable moments surrounded by nature.
+        </p>
+
+        <ul className="space-y-5">
+
+          {[
+            "Private plunge-pool suites for ultimate relaxation",
+            "Garden-facing cottages with peaceful sit-outs",
+            "Luxury tent suites blending outdoor charm with modern comfort",
+            "Handcrafted interiors inspired by Rajasthan's rich heritage",
+          ].map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-4"
+            >
+              <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-primary" />
+
+              <span className="text-lg text-slate-900">
+                {item}
+              </span>
+            </li>
+          ))}
+
+        </ul>
+
       </div>
 
       {/* IMAGE */}
-      <div className="order-2 relative h-[400px] overflow-hidden rounded-2xl shadow-2xl lg:order-2">
+
+      <div className="relative h-[520px] overflow-hidden rounded-2xl shadow-2xl">
         <Image
-          src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779191307/WhatsApp_Image_2026-05-19_at_4.06.07_PM_jgbdik.jpg"
-          alt="Retail branding showcase"
+          src={OutDoorImg?.imageUrl || DEFAULT_PLACEHOLDER}
+          alt="Luxury Stay"
           fill
           className="object-cover"
-          sizes="(max-width: 1024px) 100vw, 50vw"
+          sizes="(max-width:1024px) 100vw, 50vw"
         />
       </div>
 
     </div>
+
   </div>
 </section>
-        {/* SERVICES */}
-          <section
-            className="w-full bg-white py-20"
-            style={deferredSectionStyle}
-          >
-          <div className="container mx-auto max-w-7xl px-5">
-            <SectionHeader
-              title="Six Formats. One City. Your Consumer, Up Close."
-              subtitle=""
-            />
-              <p className="text-center text-lg leading-relaxed italic text-slate-900 mb-10">
-                From Phoenix Marketcity to Whitefield tech parks — we activate where Bangalore's buyers already move.
-              </p>
-            <div className=" grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-              {
-                icon: <Building2 />,
-                title: "Mall Activations",
-                Subtitles: "Where 1,200 Consumers Meet Your Brand in One Day",
-                desc: "High-footfall consumer engagement campaigns inside malls and retail environments.",
-              },
-              {
-                icon: <PackageOpen />,
-                title: "Product Sampling",
-                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
-                desc: "Wet & dry sampling campaigns that help consumers experience your product directly.",
-              },
-              {
-                icon: <GraduationCap />,
-                title: "School & College Activations",
-                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
-                desc: "Youth-focused engagement campaigns designed to build early brand affinity.",
-              },
-              {
-                icon: <MapPinned />,
-                title: "Feet On Street Campaigns",
-                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
-                desc: "Ground-level outreach campaigns that bring your brand directly to consumers.",
-              },
-              {
-                icon: <Sparkles />,
-                title: "Experiential Marketing",
-                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
-                desc: "Immersive brand experiences designed to improve engagement and recall.",
-              },
-              {
-                icon: <BriefcaseBusiness />,
-                title: "Corporate Activations",
-                Subtitles: "Branded stalls with trained brand ambassadors engaging directly with consumers.",
-                desc: "Professional engagement campaigns for enterprise and workplace audiences.",
-              },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="flex gap-4 rounded-xl border border-white/60 bg-white/80 p-6 backdrop-blur-sm transition-all hover:border-secondary/100 hover:bg-white"
-                >
-                  <div className="h-fit rounded-lg bg-primary/5 p-3 text-primary">
-                    {item.icon}
-                  </div>
 
-                  <div className="space-y-2">
-                    <h4 className="font-headline text-lg text-secondary font-bold">
-                      {item.title}
-                    </h4>
-
-                      <p className="text-sm font-semibold text-primary">
-                        {item.Subtitles}
-                      </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-{/* PACKAGES */}
+{/* EXPERIENCES */}
 <section
-  className="w-full bg-primary/95 py-24 text-white"
+  className="w-full bg-[#FFF9F3] py-24"
   style={deferredSectionStyle}
 >
   <div className="container mx-auto max-w-7xl px-4">
-<SectionHeader
-  title={
-    <span className="text-white">
-      Pick Your Format. We Handle the Rest.
-    </span>
-  }
-  subtitle={
-    <>
-      Four formats. Each built for one thing:{" "}
-      <span className="font-semibold text-secondary">
-        your consumer
-      </span>
-      ,{" "}
-      <span className="font-semibold text-secondary">
-        face to face with your brand
-      </span>
-      .
-    </>
-  }
-  light
-/>
 
-    <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-4 xl:grid-cols-4f">
+    {/* ================= FIRST BLOCK ================= */}
 
-      {[
-      {
-        tag: "HIGHEST FOOTFALL",
-        title: "Mall Floor Activations",
-        desc: "",
-        features: [
-          "Forum · Phoenix · Nexus · Orion · Elements",
-          "800–1,200 direct consumer contacts/day",
-          "Demo counters, sampling, brand experience zones",
-          "Permissions + manpower + setup - all handled",
-          "Weekend premium + weekday budget slots",
-        ],
-        cta: "Plan My Mall Activation",
-      },
+    <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
 
-      {
-        tag: "HIGHEST TRIAL RATE",
-        title: "Product Sampling",
-        desc: "",
-        features: [
-          "RWAs · supermarkets · transit hubs · kirana clusters",
-          "500–2,000 product trials per campaign day",
-          "Consumer feedback captured post-trial",
-          "SKU-targeted - right product, right profile",
-          "Post-campaign trial + intent data report",
-        ],
-        cta: "Start My Sampling Campaign",
-      },
+      {/* IMAGE */}
 
-      {
-        tag: "HIGHEST ENGAGEMENT RATE",
-        title: "Campus Activations",
-        desc: "",
-        features: [
-          "Bangalore's top engineering, MBA, design colleges",
-          "200–450 student touchpoints per campus day",
-          "Brand ambassador conversion built in",
-          "Ideal for D2C, EdTech, FMCG, fintech launches",
-          "Social moment creation for organic amplification",
-        ],
-        cta: "Activate On Campus",
-      },
+      <div className="relative h-[520px] overflow-hidden rounded-2xl shadow-xl">
+        <Image
+          src={OutDoorArielImg?.imageUrl || DEFAULT_PLACEHOLDER}
+          alt="Celebrate, Unwind & Explore"
+          fill
+          className="object-cover"
+        />
+      </div>
 
-      {
-        tag: "MAXIMUM REACH",
-        title: "Full Activation Programme",
-        desc: "",
-        features: [
-          "Mall + Sampling + Campus — one programme",
-          "Multi-zone Bangalore coverage in one plan",
-          "Single POC from brief to post-campaign report",
-          "Weekly updates + live execution photos",
-          "Project or retainer — your choice",
-        ],
-        cta: "Get My Full Strategy",
-      },
-      ].map((item) => (
-        <div
-          key={item.title}
-          className="group flex h-full flex-col rounded-3xl border border-white/10 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/15"
-        >
+      {/* CONTENT */}
 
-          {/* TOP */}
-          <div className="p-6">
-            <div className="mb-5 inline-flex rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-secondary">
-              {item.tag}
-            </div>
+      <div className="space-y-7">
 
-            <h3 className="mb-4 text-2xl font-bold leading-tight text-white group-hover:text-secondary">
-              {item.title}
-            </h3>
+        <SectionHeader
+          title="Celebrate, Unwind & Explore"
+          subtitle=""
+          centered={false}
+        />
 
-            <p className="text-sm leading-relaxed text-white/70">
-              {item.desc}
-            </p>
-          </div>
+        <p className="text-lg leading-8 text-slate-900 italic">
+          Whether you're seeking a peaceful getaway or planning a grand
+          celebration, Surpura Bagh offers experiences that go beyond an
+          ordinary stay.
+        </p>
 
-          {/* FEATURES */}
-          <div className="flex-1 space-y-4 px-6 pb-6">
-            {item.features.map((feature) => (
-              <div
-                key={feature}
-                className="flex items-start gap-3 border-b border-white/10 pb-4"
-              >
-                <div className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-secondary text-xs font-bold text-white">
-                  ✓
-                </div>
+        <ul className="space-y-5">
 
-                <p className="text-sm leading-relaxed text-white/80">
-                  {feature}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-auto p-6 pt-0">
-            <ScrollToLeadButton className="h-12 w-full rounded-xl bg-secondary text-sm font-bold text-white transition-all hover:bg-secondary/90">
-              {item.cta} →
-            </ScrollToLeadButton>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-          {/* MARKET SECTION */}
-    <section
-      className="w-full bg-muted py-20"
-      style={deferredSectionStyle}
-    >
-      <div className="container mx-auto max-w-7xl px-4">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-
-          {/* IMAGE */}
-          <div className="order-2 relative h-96 overflow-hidden rounded-2xl shadow-2xl lg:order-1">
-            <Image
-              src="https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779252430/WhatsApp_Image_2026-05-20_at_10.10.54_AM_jnrzpe.jpg"
-              alt="Retail Growth"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-
-          {/* CONTENT */}
-          <div className="order-1 space-y-6 lg:order-2">
-            <SectionHeader
-              title="Clients Don't Measure Impressions. They Measure These."
-              subtitle=""
-              centered={false}
-            />
-        <ul className="space-y-4">
           {[
-            <span className="text-slate-600">
-            <span className="font-semibold text-secondary">1,200+ </span>
-            direct face-to-face consumer contacts per mall activation day - documented contacts, not estimated reach
-            </span>,
-
-            <span className="text-slate-600">
-                  <span className="font-semibold text-secondary">38% </span>average rise in unaided brand recall vs. pre-campaign consumer survey, 
-                  across tracked Bangalore activations
-                </span>,
-
-            <span className="text-slate-600">
-                  <span className="font-semibold text-secondary"> 200-400 </span>
-                  direct student touchpoints per campus activation day - every interaction logged, not estimated
-                </span>,
-                <span className="text-slate-600">
-                  <span className="font-semibold text-secondary">100% </span>
-                  of campaigns delivered with a location-specific, date-stamped report - 
-                  every consumer contact documented
-                </span>,
+            "Breakfast by the pool",
+            "Private candlelight dinners",
+            "Pottery making with local artisans",
+            "Cycling across 28 acres of landscaped gardens",
+            "Wedding & event venues for 3,000+ guests",
           ].map((item) => (
+
             <li
               key={item}
-              className="flex items-center gap-3 font-medium text-primary"
+              className="flex items-center gap-4"
             >
-              <ShieldCheck className="h-6 w-6 text-secondary" />
-              {item}
-            </li>
-          ))}
-        </ul>
-          </div>
+              <ShieldCheck className="h-6 w-6 text-primary" />
 
-            </div>
-          </div>
-        </section>
+              <span className="text-lg text-slate-900">
+                {item}
+              </span>
+
+            </li>
+
+          ))}
+
+        </ul>
+
+        <p className="text-lg leading-8 text-slate-900 italic">
+          Every stay is designed to help you relax, reconnect, and create
+          lasting memories.
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* ================= SECOND BLOCK ================= */}
+
+    <div className="mt-28">
+
+      <SectionHeader
+        title="Experiences That Make Every Stay Special"
+        subtitle="Discover thoughtfully curated experiences that bring together relaxation, culture, nature, and celebration."
+      />
+
+      <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+        {[
+          {
+            title: "Private Plunge Pool Suites",
+            desc: "Enjoy complete privacy and luxury with Jodhpur's finest collection of plunge-pool suites.",
+            icon: <Sparkles className="h-7 w-7" />,
+          },
+
+          {
+            title: "Curated Dining Experiences",
+            desc: "Savour authentic Rajasthani flavours, global cuisine, and open-air dining across three unique venues.",
+            icon: <UtensilsCrossed className="h-7 w-7" />,
+          },
+
+          {
+            title: "Nature & Leisure",
+            desc: "Cycle through 28 acres of landscaped gardens, unwind by the pool, or simply embrace the peaceful surroundings.",
+            icon: <Leaf className="h-7 w-7" />,
+          },
+
+          {
+            title: "Local Cultural Experiences",
+            desc: "Experience pottery making, cattle farm visits, and authentic Rajasthani hospitality.",
+            icon: <Amphora className="h-7 w-7" />,
+          },
+
+          {
+            title: "Weddings & Celebrations",
+            desc: "Host unforgettable weddings, family gatherings, and social events for up to 3,000 guests.",
+            icon: <Heart className="h-7 w-7" />,
+          },
+
+          {
+            title: "Personalised Hospitality",
+            desc: "Every stay is tailored with warm service, thoughtful details, and experiences designed around you.",
+            icon: <Smile className="h-7 w-7" />,
+          },
+
+        ].map((item) => (
+
+          <Card
+            key={item.title}
+            className="rounded-2xl border border-[#E6D8CA] bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          >
+
+            <CardContent className="space-y-5 p-8">
+
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                {item.icon}
+              </div>
+
+              <h3 className="font-headline text-2xl text-slate-900">
+                {item.title}
+              </h3>
+
+              <p className="leading-7 text-slate-900">
+                {item.desc}
+              </p>
+
+            </CardContent>
+
+          </Card>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{/* CHOOSE YOUR STAY */}
+<section
+  className="w-full bg-white text-slate-900 py-24"
+  style={deferredSectionStyle}
+>
+  <div className="container mx-auto max-w-7xl px-4">
+
+    <SectionHeader
+      title="Plan Your Escape. Create Lasting Memories."
+      subtitle="Whether it's a romantic getaway, a family vacation, a destination wedding, or a corporate retreat, Surpura Bagh offers experiences that you'll cherish long after your stay."
+    />
+
+    <div className="mt-16">
+
+      <h2 className="mb-10 text-center font-headline text-4xl font-semibold text-slate-900">
+        Choose Your Stay
+      </h2>
+
+      {/* CAROUSEL */}
+      <div className="relative px-12">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-4">
+            {STAYS.map((item) => (
+              <CarouselItem key={item.title} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                <Card className="rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden h-full flex flex-col bg-white">
+                  <CardContent className="p-0 flex flex-col h-full">
+                    {/* Image */}
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-8 flex flex-col h-full">
+                      <h3 className="font-headline text-2xl font-semibold text-slate-900">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-4 text-slate-900 leading-7 italic">
+                        {item.description}
+                      </p>
+
+                      {/* Features */}
+                      <ul className="mt-6 space-y-3">
+                        {item.features.map((feature) => (
+                          <li key={feature} className="flex items-start gap-3">
+                            <ShieldCheck className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                            <span className="text-slate-900">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Button */}
+                      <div className="mt-auto pt-6">
+                        <ScrollToLeadButton
+                          className="w-full rounded-lg bg-primary px-6 py-4 text-base font-semibold text-white hover:bg-primary/90"
+                        >
+                          {item.button}
+                        </ScrollToLeadButton>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          {/* Carousel Controls */}
+          <CarouselPrevious className="absolute -left-6 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white shadow-md" />
+          <CarouselNext className="absolute -right-6 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white shadow-md" />
+        </Carousel>
+      </div>
+
+      {/* CTA BLOCK */}
+      <div className="mt-20 text-center">
+        <h3 className="font-headline text-3xl font-bold text-slate-900 mb-4">
+          Your Escape Awaits.
+        </h3>
+
+        <p className="mx-auto max-w-2xl text-lg leading-8 text-slate-900 mb-10 italic">
+          Whether you're planning a peaceful getaway, a family vacation, a destination wedding, or a corporate retreat, Surpura Bagh is ready to welcome you.
+        </p>
+
+        <div className="flex flex-col gap-4 sm:flex-row justify-center items-center flex-wrap">
+          <ScrollToLeadButton
+            variant="outline"
+            className="border-primary px-8 py-6 text-base font-semibold text-primary hover:bg-primary/5 sm:px-6"
+          >
+            Explore More
+          </ScrollToLeadButton>
+
+          <ScrollToLeadButton
+            className="bg-primary px-8 py-6 text-base font-semibold text-white hover:bg-primary/90 sm:px-6"
+          >
+            Book Your Stay
+          </ScrollToLeadButton>
+
+          <ScrollToLeadButton
+            className="bg-secondary px-8 py-6 text-base font-semibold text-white hover:bg-secondary/90 sm:px-6"
+          >
+            Enquire Now
+          </ScrollToLeadButton>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
         
         {/* CTA */}
         <section
@@ -660,7 +687,7 @@ already are - in the moment before they decide.
           <SectionHeader
             title={
               <>
-                3 Q3 Slots Left. First Brief Gets the Best Locations.  
+                Ready to Experience Surpura Bagh?  
               </>
             }
             subtitle=""
@@ -669,11 +696,9 @@ already are - in the moment before they decide.
             <div className="container relative z-10 mx-auto max-w-7xl space-y-8 px-4 text-center">
 
               <p className="mx-auto max-w-3xl text-base italic leading-loose text-slate-900 md:text-lg">
-                We cap new campaign onboarding each quarter to protect execution quality.
-                <br />
-                3 of 5 Q3 2026 Bangalore slots are confirmed.
-                <br />
-                Share your brief — we respond with slot availability and a custom strategy in 24 hours.
+                Escape to a boutique retreat where luxury, nature, and personalised hospitality come together. 
+                Whether you're planning a relaxing getaway, a destination wedding, 
+                or a memorable celebration, we're here to create an experience tailored just for you.
               </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -682,7 +707,7 @@ already are - in the moment before they decide.
                 size="lg"
                 className="h-14 w-full bg-secondary px-10 text-lg font-bold text-white hover:bg-secondary/90 sm:w-auto"
               >
-              Check My Slot →
+              Book Your Stay at Surpura Bagh
               </ScrollToLeadButton>
 
               {/* <ScrollToLeadButton
@@ -694,7 +719,7 @@ already are - in the moment before they decide.
               </ScrollToLeadButton> */}
             </div>
               <p className="text-xs text-muted-foreground italic text-slate-600">
-              WhatsApp or form - takes 90 seconds. We respond the same day.
+              Complete the form below, and our team will get in touch to assist with your reservation and travel plans.
               </p>
             {/* <p className="text-sm text-muted-foreground">
               Don&apos;t wait to turn your brand&apos;s potential into
@@ -714,14 +739,15 @@ already are - in the moment before they decide.
               <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                 <div className="space-y-6">
                   <h2 className="font-headline text-4xl text-primary mb-2 font-headline font-bold">
-                    Your Consumer Is Outside. Is Your Brand?
+                    Ready to Experience Surpura Bagh?
                   </h2>
 
                   <p className="text-lg text-muted-foreground">
-                    Share your brief. Get a free activation plan - 
-                    format, Bangalore locations, reach estimate, and budget guide.  </p>
+                    Escape to a boutique retreat where luxury, nature, and personalised hospitality come together. 
+                    Whether you're planning a relaxing getaway, a destination wedding, or a memorable celebration, 
+                    we're here to create an experience tailored just for you.
+                     </p>
                     <p>
-                    <br></br><span className="font-bold text-secondary text-xl">In 24 hours. At zero cost.</span>
                   </p>
                   <ScrollToLeadButton
                 size="lg"
@@ -755,7 +781,7 @@ already are - in the moment before they decide.
       <div className="fixed bottom-0 left-0 right-0 z-30 flex w-screen gap-2 border-t bg-white p-4 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] lg:hidden">
         <div className="mx-auto flex w-full max-w-7xl gap-2 px-4">
           <ScrollToLeadButton className="h-12 flex-1 bg-secondary font-bold text-white">
-            Get My Free Activation Plan →
+            Book Your Stay at Surpura Bagh
           </ScrollToLeadButton>
           
         </div>

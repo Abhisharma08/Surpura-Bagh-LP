@@ -1,7 +1,7 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  basePath: '/brand-activation',
+  basePath: '',
   skipTrailingSlashRedirect: true,
   /* config options here */
   typescript: {
@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'ik.imagekit.io',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.simplotel.com',
         port: '',
         pathname: '/**',
       },

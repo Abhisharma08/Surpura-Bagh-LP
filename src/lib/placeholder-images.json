@@ -7,22 +7,16 @@
       "imageHint": "creative design"
     },
     {
-      "id": "student-work",
-      "description": "Graphic design student working on professional project",
-      "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774271262/result_0_piixkj.png",
-      "imageHint": "designer workspace"
+      "id": "OutDoor-Design",
+      "description": "Outdoor",
+      "imageUrl": "https://assets.simplotel.com/simplotel/image/upload/x_254,y_0,w_1067,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/pool-with-sunbed",
+      "imageHint": "outdoor space"
     },
     {
-      "id": "branding-mockup",
-      "description": "Professional design awards and recognition",
-      "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1774271263/f048846c-e459-472a-9d0c-5f2f57cc01e0_yxodcc.png",
-      "imageHint": "design excellence"
-    },
-    {
-      "id": "ui-ux-design",
-      "description": "Mobile app UI/UX design process",
-      "imageUrl": "https://res.cloudinary.com/ddqqlfsjp/image/upload/v1773828062/ChatGPT_Image_Mar_18_2026_03_25_21_PM_mxizdm.png",
-      "imageHint": "app design"
+      "id": "OutDoorAriel-Design",
+      "description": "Outdoor Ariel View",
+      "imageUrl": "https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3330/x_835,y_0,w_3330,h_3330,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/DJI_0199",
+      "imageHint": "outdoor space"
     }
   ]
 }

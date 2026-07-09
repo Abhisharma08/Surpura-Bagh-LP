@@ -1,73 +1,189 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 220 13% 18%; /* #262B32 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 104 73% 43%; /* #4ABC1E */
-    --secondary-foreground: 210 40% 98%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 104 73% 43%; /* #4ABC1E */
-    --accent-foreground: 210 40% 98%;
+    /* ===========================
+       Surpura Bagh Theme
+       =========================== */
+
+    /* Background & Text */
+    --background: 0 0% 0%;
+    --foreground: 35 100% 97%;
+
+    /* Cards */
+    --card: 0 0% 0%;
+    --card-foreground: 35 100% 97%;
+
+    /* Popovers */
+    --popover: 0 0% 0%;
+    --popover-foreground: 35 100% 97%;
+
+    /* Brand */
+    --primary: 25 59% 41%; /* #A45A2B */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary */
+    --secondary: 0 0% 15%; /* #272727 */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted */
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 70%;
+
+    /* Accent */
+    --accent: 25 59% 41%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 104 73% 43%;
-    --radius: 0.75rem;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 25 59% 41%;
+    --input: 25 59% 41%;
+    --ring: 25 59% 41%;
+
+    /* Radius */
+    --radius: 6px;
   }
-  
-  html, body {
+
+  html,
+  body {
     scroll-behavior: smooth;
     -webkit-scroll-behavior: smooth;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
+
   body {
     @apply bg-background text-foreground font-body;
     overflow-x: hidden;
     min-width: 320px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-headline text-primary;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-headline text-foreground;
   }
-  
-  /* Ensure buttons are properly tappable on mobile */
+
+  p,
+  span,
+  li {
+    color: hsl(var(--foreground));
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: hsl(var(--primary));
+  }
+
+  /* Accessible Focus */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Buttons */
   button {
     touch-action: manipulation;
     -webkit-user-select: none;
     user-select: none;
     min-height: 44px;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease,
+      transform 0.2s ease;
   }
-  
-  /* Increase touch target for mobile */
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  /* Inputs */
+  input,
+  textarea,
+  select {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    border-color: hsl(var(--border));
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Text Selection */
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Mobile Touch Targets */
   @media (max-width: 768px) {
     button {
-      min-height: 48px;
       min-width: 48px;
+      min-height: 48px;
     }
   }
 }
 
 @layer components {
   .container {
-    @apply max-w-7xl;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
+
+/* ===========================
+   Scrollbar
+   =========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary)) hsl(var(--background));
+}
+
+/* ===========================
+   Animations
+   =========================== */
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);
