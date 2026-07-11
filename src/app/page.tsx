@@ -50,75 +50,75 @@ const HERO_BG_URL =
 const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
 const STAYS = [
-  {
-    title: "Private Plunge Pool Suites",
-    description:
-      "Experience complete privacy in spacious suites featuring your own plunge pool, handcrafted interiors, and tranquil outdoor spaces.",
-    image: "https://assets.simplotel.com/simplotel/image/upload/x_116,y_0,w_1058,h_794,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/IMG_6057",
-    button: "Book Now →",
-    features: [
-      "Private plunge pool",
-      "Spacious luxury interiors",
-      "Artisan-crafted furnishings",
-      "Perfect for couples & celebrations",
-    ],
-  },
+{
+  title: "Jharokha Lawn",
+  description:
+    "Perfect for wedding ceremonies and grand receptions with elegant open spaces for memorable celebrations.",
+  image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/beae395c-7b46-4f00-9d2e-def0ea401c81_99097059",
+  button: "Enquire Now →",
+  features: [
+    "6,500 sq. m. lawn",
+    "Up to 2,000 guests",
+    "Ideal for Wedding Ceremony & Reception",
+    "Flexible décor & catering options",
+  ],
+},
 
-  {
-    title: "Garden-Facing Cottages",
-    description:
-      "Wake up to lush greenery and unwind in thoughtfully designed cottages that bring you closer to nature.",
-    image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/couple-dining-1",
-    button: "Book Now →",
-    features: [
-      "Garden views",
-      "Private sit-out",
-      "Peaceful surroundings",
-      "Family-friendly stay",
-    ],
-  },
+{
+  title: "Rasala Garden",
+  description:
+    "A beautifully landscaped venue ideal for Mehendi, Sangeet, cocktail evenings, and intimate wedding celebrations.",
+  image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/couple-dining-1",
+  button: "Enquire Now →",
+  features: [
+    "6,500 sq. m. garden venue",
+    "Up to 2,000 guests",
+    "Perfect for pre-wedding functions",
+    "Elegant open-air setting",
+  ],
+},
 
-  {
-    title: "Luxury Tent Suites",
-    description:
-      "Experience the charm of luxury camping with elegant tent suites that combine outdoor living with modern comforts.",
-    image: "https://assets.simplotel.com/simplotel/image/upload/x_219,y_0,w_3498,h_2624,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/outdoor-dining-area",
-    button: "Book Now →",
-    features: [
-      "Luxury glamping experience",
-      "Contemporary amenities",
-      "Spacious interiors",
-      "Unique stay experience",
-    ],
-  },
+{
+  title: "Mandore Lawn",
+  description:
+    "Our largest celebration venue, designed for grand destination weddings and lavish receptions.",
+  image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/beae395c-7b46-4f00-9d2e-def0ea401c81_99097059",
+  button: "Enquire Now →",
+  features: [
+    "8,500 sq. m. lawn",
+    "3,000+ guest capacity",
+    "Perfect for large-scale celebrations",
+    "Spacious outdoor venue",
+  ],
+},
 
-  {
-    title: "Weddings & Celebrations",
-    description:
-      "Celebrate life's biggest moments with expansive lawns, elegant venues, and personalised event planning.",
-    image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/beae395c-7b46-4f00-9d2e-def0ea401c81_99097059",
-    button: "Enquire Now →",
-    features: [
-      "Up to 3,000 guests",
-      "Multiple event venues",
-      "Wedding accommodation",
-      "Dedicated planning support",
-    ],
-  },
+{
+  title: "Luxury Stay for Wedding Guests",
+  description:
+    "Keep your family and guests together with premium accommodations designed for comfort and relaxation.",
+  image: "https://assets.simplotel.com/simplotel/image/upload/x_116,y_0,w_1058,h_794,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/IMG_6057",
+  button: "Book Now →",
+  features: [
+    "Private plunge-pool suites",
+    "Garden-facing cottages",
+    "Luxury tent suites",
+    "Family-friendly accommodation",
+  ],
+},
 
-  {
-    title: "Corporate Retreats",
-    description:
-      "Host productive meetings, team outings, and corporate events in a peaceful setting surrounded by nature.",
-    image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/couple-dining-1",
-    button: "Enquire Now →",
-    features: [
-      "Team retreats",
-      "Corporate events",
-      "Luxury accommodation",
-      "Curated dining experiences",
-    ],
-  },
+{
+  title: "Wedding Planning & Hospitality",
+  description:
+    "From venue selection to guest management, our experienced team ensures every detail is seamlessly executed.",
+  image: "https://assets.simplotel.com/simplotel/image/upload/x_219,y_0,w_3498,h_2624,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/outdoor-dining-area",
+  button: "Enquire Now →",
+  features: [
+    "Dedicated wedding coordinator",
+    "Event planning support",
+    "Curated catering experiences",
+    "Personalised guest hospitality",
+  ],
+},
 ];
 
 export default function LandingPage() {
@@ -211,30 +211,14 @@ export default function LandingPage() {
       <div className="space-y-8 text-white">
 
         <h1 className="font-headline text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
-          Experience Jodhpur&apos;s Most Peaceful Luxury Resort
+          Plan Your Dream Destination Wedding in Jodhpur
         </h1>
 
         <p className="max-w-2xl text-lg leading-8 text-white/90 italic">
-          Experience slow luxury across 28 acres of landscaped gardens with
-          private plunge-pool suites, curated dining experiences, and grand
-          celebration spaces. Where nature, privacy, and personalised
-          hospitality come together for unforgettable stays.
+         Celebrate your special day amidst 28 acres of landscaped gardens,
+          elegant wedding venues, luxury accommodation, and personalised hospitality. From intimate ceremonies to grand celebrations with over 3,000 guests,
+          Surpura Bagh creates weddings that become lifelong memories.
         </p>
-
-        {/* <div className="flex flex-wrap gap-4">
-
-          <ScrollToLeadButton className="bg-primary px-8 py-6 text-base font-semibold text-white hover:bg-primary/90">
-            Book Your Stay
-          </ScrollToLeadButton>
-
-          <ScrollToLeadButton
-            variant="outline"
-            className="border-white bg-transparent px-8 py-6 text-base text-white hover:bg-white hover:text-black"
-          >
-            Explore More
-          </ScrollToLeadButton>
-
-        </div> */}
 
         {/* STATS */}
 
@@ -254,22 +238,22 @@ export default function LandingPage() {
           <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
             <Home className="h-7 w-7 text-white mb-1.5" />
             <h3 className="text-base font-bold text-white">
-              Private Suites
+              3 Wedding Venues
             </h3>
 
             <p className="mt-0.5 text-xs text-white/80">
-              Plunge Pool Experiences
+              Outdoor Celebration Spaces
             </p>
           </div>
 
           <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
             <ChefHat className="h-7 w-7 text-white mb-1.5" />
             <h3 className="text-base font-bold text-white">
-              3 Dining Venues
+              Luxury Suites
             </h3>
 
             <p className="mt-0.5 text-xs text-white/80">
-              Curated Dining
+              Stay for Family & Guests
             </p>
           </div>
 
@@ -331,23 +315,23 @@ export default function LandingPage() {
       <div className="order-1 space-y-7 lg:order-2">
 
         <SectionHeader
-          title="Where Nature, Luxury & Hospitality Come Together"
+          title="Where Your Forever Begins"
           subtitle=""
           centered={false}
         />
 
         <p className="text-lg leading-8 text-slate-900 italic">
-          At Surpura Bagh, every stay is thoughtfully crafted to offer comfort,
-          privacy, and meaningful experiences amidst 28 acres of landscaped
-          gardens.
+          At Surpura Bagh, 
+          every celebration is thoughtfully planned to create timeless memories amidst nature, luxury, 
+          and warm Rajasthani hospitality.
         </p>
 
         <ul className="space-y-5">
 
           {[
-            "Private plunge-pool suites for complete relaxation",
-            "Thoughtfully designed accommodations crafted by regional artisans",
-            "Curated dining experiences across three unique venues",
+            "28-acre boutique wedding destination",
+            "Three beautifully landscaped wedding venues",
+            "Luxury accommodation for wedding guests",
           ].map((item) => (
             <li
               key={item}
@@ -363,15 +347,13 @@ export default function LandingPage() {
 
         </ul>
 
-        <p className="text-lg leading-8 text-slate-900 italic">
-          More than a resort, it's a destination for memorable stays and
-          celebrations.
+        <p className="text-lg leading-8 text-slate-900 font-bold">
+          More than a venue—it's where your love story comes to life.
         </p>
 
         <p className="text-lg leading-8 text-slate-900 italic">
-          Whether you're escaping for a weekend, celebrating a special occasion,
-          or planning a grand event, Surpura Bagh offers the perfect balance of
-          luxury, nature, and personalised hospitality.
+          Whether you're planning an intimate ceremony or a grand destination wedding, 
+          our dedicated team ensures every celebration is beautifully executed.
         </p>
 
       </div>
@@ -387,23 +369,23 @@ export default function LandingPage() {
       <div className="space-y-7">
 
         <SectionHeader
-          title="Stay Experiences Designed Around You"
+          title="Wedding Experiences Designed Around You"
           subtitle=""
           centered={false}
         />
 
         <p className="text-lg leading-8 text-slate-900 italic">
-          Every stay at Surpura Bagh is thoughtfully curated to offer comfort,
-          privacy, and memorable moments surrounded by nature.
+          Host every wedding function at one breathtaking destination without the hassle of changing venues.
         </p>
 
         <ul className="space-y-5">
 
           {[
-            "Private plunge-pool suites for ultimate relaxation",
-            "Garden-facing cottages with peaceful sit-outs",
-            "Luxury tent suites blending outdoor charm with modern comfort",
-            "Handcrafted interiors inspired by Rajasthan's rich heritage",
+            "Mehendi & Haldi celebrations",
+            "Sangeet & Cocktail evenings",
+            "Wedding Ceremony & Reception",
+            "Luxury stay for family & guests",
+            "Curated dining & personalised hospitality",
           ].map((item) => (
             <li
               key={item}
@@ -465,25 +447,24 @@ export default function LandingPage() {
       <div className="space-y-7">
 
         <SectionHeader
-          title="Celebrate, Unwind & Explore"
+          title="Celebrate Every Moment Together"
           subtitle=""
           centered={false}
         />
 
         <p className="text-lg leading-8 text-slate-900 italic">
-          Whether you're seeking a peaceful getaway or planning a grand
-          celebration, Surpura Bagh offers experiences that go beyond an
-          ordinary stay.
+          From your first welcome ceremony to your final farewell brunch, 
+          Surpura Bagh transforms every celebration into an unforgettable experience.
         </p>
 
         <ul className="space-y-5">
 
           {[
-            "Breakfast by the pool",
-            "Private candlelight dinners",
-            "Pottery making with local artisans",
-            "Cycling across 28 acres of landscaped gardens",
-            "Wedding & event venues for 3,000+ guests",
+            "Expansive outdoor wedding venues",
+            "Private plunge-pool suites",
+            "Bespoke wedding dining",
+            "Stunning photography backdrops",
+            "Dedicated wedding planning support",
           ].map((item) => (
 
             <li
@@ -502,9 +483,8 @@ export default function LandingPage() {
 
         </ul>
 
-        <p className="text-lg leading-8 text-slate-900 italic">
-          Every stay is designed to help you relax, reconnect, and create
-          lasting memories.
+        <p className="text-lg leading-8 text-slate-900 font-bold">
+          Every celebration is thoughtfully designed around your vision.
         </p>
 
       </div>
@@ -516,48 +496,48 @@ export default function LandingPage() {
     <div className="mt-28">
 
       <SectionHeader
-        title="Experiences That Make Every Stay Special"
+        title="Everything You Need for Your Perfect Destination Wedding"
         subtitle="Discover thoughtfully curated experiences that bring together relaxation, culture, nature, and celebration."
       />
 
       <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 
         {[
-          {
-            title: "Private Plunge Pool Suites",
-            desc: "Enjoy complete privacy and luxury with Jodhpur's finest collection of plunge-pool suites.",
-            icon: <Sparkles className="h-7 w-7" />,
-          },
+        {
+          title: "Grand Wedding Venues",
+          desc: "Host celebrations across expansive lawns surrounded by lush greenery and elegant landscapes.",
+          icon: <Sparkles className="h-7 w-7" />,
+        },
 
-          {
-            title: "Curated Dining Experiences",
-            desc: "Savour authentic Rajasthani flavours, global cuisine, and open-air dining across three unique venues.",
-            icon: <UtensilsCrossed className="h-7 w-7" />,
-          },
+        {
+          title: "Luxury Accommodation",
+          desc: "Private plunge-pool suites, cottages, and premium stays designed for family and wedding guests.",
+          icon: <UtensilsCrossed className="h-7 w-7" />,
+        },
 
-          {
-            title: "Nature & Leisure",
-            desc: "Cycle through 28 acres of landscaped gardens, unwind by the pool, or simply embrace the peaceful surroundings.",
-            icon: <Leaf className="h-7 w-7" />,
-          },
+        {
+          title: "Curated Wedding Dining",
+          desc: "Authentic Rajasthani cuisine, Indian favourites, and customised menus crafted for every celebration.",
+          icon: <Leaf className="h-7 w-7" />,
+        },
 
-          {
-            title: "Local Cultural Experiences",
-            desc: "Experience pottery making, cattle farm visits, and authentic Rajasthani hospitality.",
-            icon: <Amphora className="h-7 w-7" />,
-          },
+        {
+          title: "Dedicated Wedding Planning",
+          desc: "Our experienced team helps coordinate every detail—from venues to guest hospitality.",
+          icon: <Amphora className="h-7 w-7" />,
+        },
 
-          {
-            title: "Weddings & Celebrations",
-            desc: "Host unforgettable weddings, family gatherings, and social events for up to 3,000 guests.",
-            icon: <Heart className="h-7 w-7" />,
-          },
+        {
+          title: "Picture-Perfect Backdrops",
+          desc: "Beautiful gardens, heritage-inspired architecture, and open skies create unforgettable wedding photographs.",
+          icon: <Heart className="h-7 w-7" />,
+        },
 
-          {
-            title: "Personalised Hospitality",
-            desc: "Every stay is tailored with warm service, thoughtful details, and experiences designed around you.",
-            icon: <Smile className="h-7 w-7" />,
-          },
+        {
+          title: "Complete Hospitality",
+          desc: "Accommodation, catering, celebrations, and personalised service—all in one destination.",
+          icon: <Smile className="h-7 w-7" />,
+        },
 
         ].map((item) => (
 
@@ -601,14 +581,15 @@ export default function LandingPage() {
   <div className="container mx-auto max-w-7xl px-4">
 
     <SectionHeader
-      title="Plan Your Escape. Create Lasting Memories."
-      subtitle="Whether it's a romantic getaway, a family vacation, a destination wedding, or a corporate retreat, Surpura Bagh offers experiences that you'll cherish long after your stay."
+      title="Begin Your Forever at Surpura Bagh"
+      subtitle="Whether you dream of an intimate celebration or a grand destination wedding, 
+      Surpura Bagh offers the perfect setting for memories that last a lifetime."
     />
 
     <div className="mt-16">
 
       <h2 className="mb-10 text-center font-headline text-4xl font-semibold text-slate-900">
-        Choose Your Stay
+        Choose Your Wedding Experience
       </h2>
 
       {/* CAROUSEL */}
@@ -695,11 +676,12 @@ export default function LandingPage() {
       {/* CTA BLOCK */}
       <div className="mt-20 text-center">
         <h3 className="font-headline text-3xl font-bold text-slate-900 mb-4">
-          Your Escape Awaits.
+          Your Dream Wedding Starts Here
         </h3>
 
         <p className="mx-auto max-w-2xl text-lg leading-8 text-slate-900 mb-10 italic">
-          Whether you're planning a peaceful getaway, a family vacation, a destination wedding, or a corporate retreat, Surpura Bagh is ready to welcome you.
+            Celebrate your love at one of Jodhpur's most beautiful destination wedding venues. 
+            Let our team help you create a wedding experience that's elegant, effortless, and unforgettable.
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row justify-center items-center flex-wrap">
@@ -707,13 +689,13 @@ export default function LandingPage() {
             variant="outline"
             className="border-primary px-8 py-6 text-base font-semibold text-primary hover:bg-primary/5 sm:px-6"
           >
-            Explore More
+            Explore Venues
           </ScrollToLeadButton>
 
           <ScrollToLeadButton
             className="bg-primary px-8 py-6 text-base font-semibold text-white hover:bg-primary/90 sm:px-6"
           >
-            Book Your Stay
+           Plan Your Wedding
           </ScrollToLeadButton>
 
           <ScrollToLeadButton
@@ -729,9 +711,6 @@ export default function LandingPage() {
   </div>
 </section>
 
-        
-        {/* CTA */}
-
         {/* FINAL CTA */}
         <section
           id="lead-form"
@@ -743,13 +722,12 @@ export default function LandingPage() {
               <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                 <div className="space-y-6">
                   <h2 className="font-headline text-4xl text-white mb-2 font-headline font-bold">
-                    Ready to Experience Surpura Bagh?
+                    Ready to Plan Your Dream Wedding?
                   </h2>
 
                   <p className="text-lg text-muted-foreground">
-                    Escape to a boutique retreat where luxury, nature, and personalised hospitality come together. 
-                    Whether you're planning a relaxing getaway, a destination wedding, or a memorable celebration, 
-                    we're here to create an experience tailored just for you.
+                    Celebrate your special day at Surpura Bagh, where breathtaking venues, luxury accommodation, 
+                    and personalised hospitality come together to create unforgettable celebrations.
                      </p>
                     <p>
                   </p>
@@ -757,7 +735,7 @@ export default function LandingPage() {
                 size="lg"
                 className="h-14 w-full bg-primary px-10 text-lg font-bold text-white hover:bg-primary/90 sm:w-auto italic "
               >
-              Book Your Stay at Surpura Bagh
+              Enquire About Your Destination Wedding
               </ScrollToLeadButton>
                 </div>
 
