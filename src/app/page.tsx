@@ -3,14 +3,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
-  MapPinned,
-  Building2,
-  PackageOpen,
   ShieldCheck,
-  BriefcaseBusiness,
-  GraduationCap,
   Sparkles,
-  Subtitles,
   UtensilsCrossed,
   Leaf,
   Heart,
@@ -54,7 +48,7 @@ const STAYS = [
   title: "Jharokha Lawn",
   description:
     "Perfect for wedding ceremonies and grand receptions with elegant open spaces for memorable celebrations.",
-  image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/beae395c-7b46-4f00-9d2e-def0ea401c81_99097059",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934483/wed_3_xw2dwj.png",
   button: "Enquire Now →",
   features: [
     "6,500 sq. m. lawn",
@@ -68,7 +62,7 @@ const STAYS = [
   title: "Rasala Garden",
   description:
     "A beautifully landscaped venue ideal for Mehendi, Sangeet, cocktail evenings, and intimate wedding celebrations.",
-  image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/couple-dining-1",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934484/wed_5_zil6mp.png",
   button: "Enquire Now →",
   features: [
     "6,500 sq. m. garden venue",
@@ -82,7 +76,7 @@ const STAYS = [
   title: "Mandore Lawn",
   description:
     "Our largest celebration venue, designed for grand destination weddings and lavish receptions.",
-  image: "https://assets.simplotel.com/simplotel/image/upload/x_90,y_0,w_1420,h_1066,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/beae395c-7b46-4f00-9d2e-def0ea401c81_99097059",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934483/wed_2_isy8a1.png",
   button: "Enquire Now →",
   features: [
     "8,500 sq. m. lawn",
@@ -96,7 +90,7 @@ const STAYS = [
   title: "Luxury Stay for Wedding Guests",
   description:
     "Keep your family and guests together with premium accommodations designed for comfort and relaxation.",
-  image: "https://assets.simplotel.com/simplotel/image/upload/x_116,y_0,w_1058,h_794,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/IMG_6057",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934482/Luxury_stay_z8p4t0.webp",
   button: "Book Now →",
   features: [
     "Private plunge-pool suites",
@@ -110,7 +104,7 @@ const STAYS = [
   title: "Wedding Planning & Hospitality",
   description:
     "From venue selection to guest management, our experienced team ensures every detail is seamlessly executed.",
-  image: "https://assets.simplotel.com/simplotel/image/upload/x_219,y_0,w_3498,h_2624,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/surpura-bagh/outdoor-dining-area",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934484/wed_cja6l2.png",
   button: "Enquire Now →",
   features: [
     "Dedicated wedding coordinator",
