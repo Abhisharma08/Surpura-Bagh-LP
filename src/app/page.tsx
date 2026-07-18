@@ -272,7 +272,7 @@ export default function LandingPage() {
         <LeadForm
           title="Book Your Stay at Surpura Bagh"
           subtitle="Complete the form below, and our team will get in touch to assist with your reservation and travel plans."
-          buttonText="Book Your Stay"
+          buttonText="Get Quote for Wedding"
           className="max-w-sm mx-auto py-8"
         />
       </div>
