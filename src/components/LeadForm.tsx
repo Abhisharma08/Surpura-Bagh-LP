@@ -56,7 +56,7 @@ export default function LeadForm({
   className,
   title = "",
   subtitle = "",
-  buttonText = "",
+  buttonText = "Get Quote for Wedding",
   buttonclassName ="",
   bottomText = "",
 }: LeadFormProps) {
