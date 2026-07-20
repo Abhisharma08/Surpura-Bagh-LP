@@ -48,7 +48,7 @@ const STAYS = [
   title: "Jharokha Lawn",
   description:
     "Perfect for wedding ceremonies and grand receptions with elegant open spaces for memorable celebrations.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934483/wed_3_xw2dwj.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528695/Jharokha_lawn_hi9ril.png",
   button: "Enquire Now →",
   features: [
     "6,500 sq. m. lawn",
@@ -62,7 +62,7 @@ const STAYS = [
   title: "Rasala Garden",
   description:
     "A beautifully landscaped venue ideal for Mehendi, Sangeet, cocktail evenings, and intimate wedding celebrations.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934484/wed_5_zil6mp.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528697/Rasala_Lawn_jwy3kf.png",
   button: "Enquire Now →",
   features: [
     "6,500 sq. m. garden venue",
@@ -76,7 +76,7 @@ const STAYS = [
   title: "Mandore Lawn",
   description:
     "Our largest celebration venue, designed for grand destination weddings and lavish receptions.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934483/wed_2_isy8a1.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528690/Mandore_lawn_yqhstx.png",
   button: "Enquire Now →",
   features: [
     "8,500 sq. m. lawn",
