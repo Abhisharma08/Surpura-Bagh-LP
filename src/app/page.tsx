@@ -45,16 +45,44 @@ const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
 const STAYS = [
 {
-  title: "Jharokha Lawn",
+  title: "Village Lounge",
   description:
-    "Perfect for wedding ceremonies and grand receptions with elegant open spaces for memorable celebrations.",
+    "An intimate, hut-inspired celebration venue perfect for Mehendi ceremonies, Haldi functions, bridal brunches, and welcome lunches.",
   image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528695/Jharokha_lawn_hi9ril.png",
   button: "Enquire Now →",
   features: [
-    "6,500 sq. m. lawn",
-    "Up to 2,000 guests",
-    "Ideal for Wedding Ceremony & Reception",
-    "Flexible décor & catering options",
+    "Up to 300 Guests",
+    "Rustic Architecture",
+    "Open-air Celebration",
+    "Village Lounge Lawn",
+  ],
+},
+
+{
+  title: "Baradari Lawn",
+  description:
+    "Celebrate amidst centuries-old heritage architecture with one of Surpura Bagh's most iconic wedding settings.",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528695/Jharokha_lawn_hi9ril.png",
+  button: "Enquire Now →",
+  features: [
+    "Historic Baradari",
+    "Heritage Architecture",
+    "Up to 2,500 Guests",
+    "Royal Wedding Setting",
+  ],
+},
+
+{
+  title: "Kokum",
+  description:
+    "A vibrant poolside venue for cocktail evenings, welcome dinners, Mehendi celebrations, and unforgettable after-parties.",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528697/Rasala_Lawn_jwy3kf.png",
+  button: "Enquire Now →",
+  features: [
+    "Poolside Venue",
+    "Up to 400 Guests",
+    "Cocktail Evenings",
+    "After Hours Celebrations",
   ],
 },
 
@@ -67,6 +95,7 @@ const STAYS = [
   features: [
     "6,500 sq. m. garden venue",
     "Up to 2,000 guests",
+    "Jharokha Wedding Mandap",
     "Perfect for pre-wedding functions",
     "Elegant open-air setting",
   ],
@@ -89,14 +118,14 @@ const STAYS = [
 {
   title: "Luxury Stay for Wedding Guests",
   description:
-    "Keep your family and guests together with premium accommodations designed for comfort and relaxation.",
+    "Luxury Pool Villas, Plunge Pool Suites, Garden Suites, and Vana Executive Suites designed for complete comfort throughout your celebrations.",
   image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934482/Luxury_stay_z8p4t0.webp",
-  button: "Book Now →",
+  button: "Enquire Now →",
   features: [
-    "Private plunge-pool suites",
-    "Garden-facing cottages",
-    "Luxury tent suites",
-    "Family-friendly accommodation",
+    "Private Plunge Pool Suites",
+    "Garden Suites",
+    "Pool Villas",
+    "Premium Hospitality",
   ],
 },
 
@@ -209,9 +238,10 @@ export default function LandingPage() {
         </h1>
 
         <p className="max-w-2xl text-lg leading-8 text-white/90 italic">
-         Celebrate your special day amidst 28 acres of landscaped gardens,
-          elegant wedding venues, luxury accommodation, and personalised hospitality. From intimate ceremonies to grand celebrations with over 3,000 guests,
-          Surpura Bagh creates weddings that become lifelong memories.
+         Celebrate your special day amidst 28 acres of landscaped gardens, 
+         heritage-inspired celebration spaces, elegant luxury suites, and bespoke hospitality. 
+         From intimate ceremonies to grand weddings with over 3,000 guests, 
+         Surpura Bagh creates destination weddings inspired by Rajasthan's royal charm and modern luxury. 
         </p>
 
         {/* STATS */}
@@ -315,17 +345,17 @@ export default function LandingPage() {
         />
 
         <p className="text-lg leading-8 text-slate-900 italic">
-          At Surpura Bagh, 
-          every celebration is thoughtfully planned to create timeless memories amidst nature, luxury, 
-          and warm Rajasthani hospitality.
+          Surrounded by 28 acres of lush greenery, 
+          Surpura Bagh is a boutique destination where Rajasthan's royal heritage, handcrafted stone architecture, 
+          and contemporary luxury come together to create extraordinary celebrations. 
         </p>
 
         <ul className="space-y-5">
 
           {[
-            "28-acre boutique wedding destination",
-            "Three beautifully landscaped wedding venues",
-            "Luxury accommodation for wedding guests",
+            "Boutique destination wedding resort",
+            "Heritage-inspired celebration spaces",
+            "Luxury suites & pool villas for wedding guests",
           ].map((item) => (
             <li
               key={item}
@@ -342,12 +372,12 @@ export default function LandingPage() {
         </ul>
 
         <p className="text-lg leading-8 text-slate-900 font-bold">
-          More than a venue—it's where your love story comes to life.
+          More than a venue—it's where timeless traditions meet unforgettable celebrations.
         </p>
 
         <p className="text-lg leading-8 text-slate-900 italic">
-          Whether you're planning an intimate ceremony or a grand destination wedding, 
-          our dedicated team ensures every celebration is beautifully executed.
+          Whether you're planning an intimate ceremony or a lavish multi-day wedding, 
+          every detail is thoughtfully curated to create memories that last a lifetime.
         </p>
 
       </div>
@@ -369,17 +399,19 @@ export default function LandingPage() {
         />
 
         <p className="text-lg leading-8 text-slate-900 italic">
-          Host every wedding function at one breathtaking destination without the hassle of changing venues.
+          From the heritage-inspired Jharokha and iconic Baradari to elegant lawns and poolside venues, 
+          every space is designed to create a unique celebration experience.
         </p>
 
         <ul className="space-y-5">
 
           {[
-            "Mehendi & Haldi celebrations",
-            "Sangeet & Cocktail evenings",
-            "Wedding Ceremony & Reception",
-            "Luxury stay for family & guests",
-            "Curated dining & personalised hospitality",
+            "Mehendi & Haldi Celebrations",
+            "Cocktail Evenings at Kokum",
+            "Sacred Pheras at Jharokha",
+            "Grand Receptions on Rasala & Mandore Lawns",
+            "Luxury Stay for Family & Guests",
+            "Curated Dining & Bespoke Hospitality",
           ].map((item) => (
             <li
               key={item}
@@ -447,18 +479,18 @@ export default function LandingPage() {
         />
 
         <p className="text-lg leading-8 text-slate-900 italic">
-          From your first welcome ceremony to your final farewell brunch, 
-          Surpura Bagh transforms every celebration into an unforgettable experience.
+          From intimate ceremonies beneath heritage-inspired architecture to grand receptions under open skies,
+           every celebration at Surpura Bagh is designed to feel effortless, elegant, and unforgettable..
         </p>
 
         <ul className="space-y-5">
 
           {[
-            "Expansive outdoor wedding venues",
-            "Private plunge-pool suites",
-            "Bespoke wedding dining",
+            "Heritage celebration spaces",
+            "Private plunge pool suites",
+            "Bespoke culinary experiences",
             "Stunning photography backdrops",
-            "Dedicated wedding planning support",
+            "Dedicated wedding planning",
           ].map((item) => (
 
             <li
@@ -497,42 +529,41 @@ export default function LandingPage() {
       <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 
         {[
-        {
-          title: "Grand Wedding Venues",
-          desc: "Host celebrations across expansive lawns surrounded by lush greenery and elegant landscapes.",
-          icon: <Sparkles className="h-7 w-7" />,
-        },
+{
+  title: "Grand Celebration Venues",
+  desc: "Five distinctive venues designed for every wedding celebration—from intimate Mehendi ceremonies to grand receptions for over 3,000 guests.",
+  icon: <Sparkles className="h-7 w-7" />,
+},
 
-        {
-          title: "Luxury Accommodation",
-          desc: "Private plunge-pool suites, cottages, and premium stays designed for family and wedding guests.",
-          icon: <UtensilsCrossed className="h-7 w-7" />,
-        },
+{
+  title: "Luxury Accommodation",
+  desc: "Elegant Pool Villas, Plunge Pool Suites, Garden Suites, and Vana Executive Suites designed for families and wedding guests.",
+  icon: <UtensilsCrossed className="h-7 w-7" />,
+},
 
-        {
-          title: "Curated Wedding Dining",
-          desc: "Authentic Rajasthani cuisine, Indian favourites, and customised menus crafted for every celebration.",
-          icon: <Leaf className="h-7 w-7" />,
-        },
+{
+  title: "Curated Culinary Experiences",
+  desc: "Farm-fresh vegetarian cuisine inspired by Rajasthan and North India, complemented by bespoke wedding menus.",
+  icon: <Leaf className="h-7 w-7" />,
+},
 
-        {
-          title: "Dedicated Wedding Planning",
-          desc: "Our experienced team helps coordinate every detail—from venues to guest hospitality.",
-          icon: <Amphora className="h-7 w-7" />,
-        },
+{
+  title: "Wedding Planning",
+  desc: "Dedicated planning assistance from venue selection to guest hospitality and celebration management.",
+  icon: <Amphora className="h-7 w-7" />,
+},
 
-        {
-          title: "Picture-Perfect Backdrops",
-          desc: "Beautiful gardens, heritage-inspired architecture, and open skies create unforgettable wedding photographs.",
-          icon: <Heart className="h-7 w-7" />,
-        },
+{
+  title: "Heritage Backdrops",
+  desc: "Iconic Baradari, Jharokha, landscaped gardens, fountains, and heritage-inspired architecture create timeless wedding memories.",
+  icon: <Heart className="h-7 w-7" />,
+},
 
-        {
-          title: "Complete Hospitality",
-          desc: "Accommodation, catering, celebrations, and personalised service—all in one destination.",
-          icon: <Smile className="h-7 w-7" />,
-        },
-
+{
+  title: "Complete Destination Wedding Experience",
+  desc: "Accommodation, dining, celebrations, hospitality, and personalised experiences, all within one beautiful destination.",
+  icon: <Smile className="h-7 w-7" />,
+},
         ].map((item) => (
 
           <Card
@@ -735,7 +766,8 @@ export default function LandingPage() {
 
               <LeadForm
               title="Book Your Stay at Surpura Bagh"
-              subtitle="Complete the form below, and our team will get in touch to assist with your reservation and travel plans."
+              subtitle="Complete the form below, and our wedding specialists will get in touch to discuss your preferred dates, 
+              guest count, venue options, accommodation, and customised wedding requirements."
               buttonText=" Enquire Now"
               buttonclassName="italic tracking-wide"
               bottomText={ <>
