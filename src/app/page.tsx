@@ -44,7 +44,7 @@ const STAYS = [
   title: "Village Lounge",
   description:
     "An intimate, hut-inspired celebration venue perfect for Mehendi ceremonies, Haldi functions, bridal brunches, and welcome lunches.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528695/Jharokha_lawn_hi9ril.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792500/Village_Lawn_jowloy.png",
   button: "Enquire Now →",
   features: [
     "Up to 300 Guests",
@@ -58,7 +58,7 @@ const STAYS = [
   title: "Baradari Lawn",
   description:
     "Celebrate amidst centuries-old heritage architecture with one of Surpura Bagh's most iconic wedding settings.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528695/Jharokha_lawn_hi9ril.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792497/Bardari_at15jm.png",
   button: "Enquire Now →",
   features: [
     "Historic Baradari",
@@ -72,7 +72,7 @@ const STAYS = [
   title: "Kokum",
   description:
     "A vibrant poolside venue for cocktail evenings, welcome dinners, Mehendi celebrations, and unforgettable after-parties.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528697/Rasala_Lawn_jwy3kf.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792499/Kokum_yrdlwu.png",
   button: "Enquire Now →",
   features: [
     "Poolside Venue",
