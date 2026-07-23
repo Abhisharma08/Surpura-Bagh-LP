@@ -17,9 +17,9 @@ const belleza = Belleza({
 });
 
 export const metadata: Metadata = {
-  title: "Luxury Resort in Jodhpur | Private Pool Suites | Surpura Bagh",
+  title: "Destination Wedding Venue in Jodhpur | Surpura Bagh",
   description:
-    "Experience slow luxury at Surpura Bagh, Jodhpur's boutique resort set across 28 acres of landscaped gardens.",
+    "Host your dream destination wedding at Surpura Bagh, Jodhpur. Celebrate amidst heritage-inspired venues, luxury suites, curated dining, and personalised hospitality.",
 };
 
 export default function RootLayout({
