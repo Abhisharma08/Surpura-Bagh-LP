@@ -258,7 +258,7 @@ export default function LandingPage() {
           <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
             <Home className="h-7 w-7 text-white mb-1.5" />
             <h3 className="text-base font-bold text-white">
-              3 Wedding Venues
+              4 Wedding Venues
             </h3>
 
             <p className="mt-0.5 text-xs text-white/80">
@@ -269,7 +269,7 @@ export default function LandingPage() {
           <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
             <ChefHat className="h-7 w-7 text-white mb-1.5" />
             <h3 className="text-base font-bold text-white">
-              Luxury Suites
+              Luxury villas
             </h3>
 
             <p className="mt-0.5 text-xs text-white/80">
