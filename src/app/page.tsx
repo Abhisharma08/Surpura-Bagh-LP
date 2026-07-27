@@ -35,7 +35,7 @@ const LOGO_URL =
   "https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1916,h_1210,r_0,c_crop,q_80,dpr_1,f_auto,fl_progressive/w_355,h_200,f_auto,c_fit/surpura-bagh/surpura_png_13250d6a";
 
 const HERO_BG_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783887183/DSC01268_967f735f_mwpfv8.webp";
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
 
 const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
