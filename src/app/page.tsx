@@ -230,7 +230,7 @@ export default function LandingPage() {
       <div className="space-y-8 text-white">
 
         <h1 className="font-headline text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
-          Plan Your Dream Destination Wedding in Jodhpur
+          Host a Luxury Boutique Destination Wedding in Jodhpur
         </h1>
 
         <p className="max-w-2xl text-lg leading-8 text-white/90 italic">
