@@ -23,5 +23,11 @@ export const PlaceHolderImages: ImagePlaceholder[] = [
       "description": "Outdoor Ariel View",
       "imageUrl": "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784550864/ChatGPT_Image_Jun_5_2026_04_27_07_PM_cnmutp.png",
       "imageHint": "outdoor space"
+    },
+    {
+      "id": "celebrate-moments-image",
+      "description": "celebrate",
+      "imageUrl": "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1785232447/image3_urdsol.png",
+      "imageHint": "celebrate image"
     }
 ];

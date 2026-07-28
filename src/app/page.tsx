@@ -47,7 +47,7 @@ const STAYS = [
   image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792500/Village_Lawn_jowloy.png",
   button: "Enquire Now →",
   features: [
-    "Up to 300 Guests",
+    "Up to 300 pax",
     "Rustic Architecture",
     "Open-air Celebration",
     "Village Lounge Lawn",
@@ -63,7 +63,7 @@ const STAYS = [
   features: [
     "Historic Baradari",
     "Heritage Architecture",
-    "Up to 2,500 Guests",
+    "Up to 2,500 pax",
     "Royal Wedding Setting",
   ],
 },
@@ -76,7 +76,7 @@ const STAYS = [
   button: "Enquire Now →",
   features: [
     "Poolside Venue",
-    "Up to 400 Guests",
+    "Up to 400 pax",
     "Cocktail Evenings",
     "After Hours Celebrations",
   ],
@@ -90,7 +90,7 @@ const STAYS = [
   button: "Enquire Now →",
   features: [
     "6,500 sq. m. garden venue",
-    "Up to 2,000 guests",
+    "Up to 2,000 pax",
     "Jharokha Wedding Mandap",
     "Perfect for pre-wedding functions",
     "Elegant open-air setting",
@@ -105,7 +105,7 @@ const STAYS = [
   button: "Enquire Now →",
   features: [
     "8,500 sq. m. lawn",
-    "3,000+ guest capacity",
+    "3,000+ pax capacity",
     "Perfect for large-scale celebrations",
     "Spacious outdoor venue",
   ],
@@ -173,6 +173,9 @@ export default function LandingPage() {
   const OutDoorArielImg = PlaceHolderImages.find(
     (img) => img.id === "OutDoorAriel-Design"
   );
+  const CelebrateMomentsImg = PlaceHolderImages.find(
+  (img) => img.id === "celebrate-moments-image"
+);
 
   const deferredSectionStyle = {
     contentVisibility: "auto",
@@ -236,7 +239,7 @@ export default function LandingPage() {
         <p className="max-w-2xl text-lg leading-8 text-white/90 italic">
          Celebrate your special day amidst 28 acres of landscaped gardens, 
          heritage-inspired celebration spaces, elegant luxury suites, and bespoke hospitality. 
-         From intimate ceremonies to grand weddings with over 3,000 guests, 
+         From intimate ceremonies to grand weddings with over 3,000 pax, 
          Surpura Bagh creates destination weddings inspired by Rajasthan's royal charm and modern luxury. 
         </p>
 
@@ -280,7 +283,7 @@ export default function LandingPage() {
           <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
             <Users className="h-7 w-7 text-white mb-1.5" />
             <h3 className="text-base font-bold text-white">
-              3,000+ Guests
+              3,000+ pax
             </h3>
 
             <p className="mt-0.5 text-xs text-white/80">
@@ -453,16 +456,17 @@ export default function LandingPage() {
 
     <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
 
-      {/* IMAGE */}
 
-      <div className="relative h-[520px] overflow-hidden rounded-2xl shadow-xl">
-        <Image
-          src={OutDoorArielImg?.imageUrl || DEFAULT_PLACEHOLDER}
-          alt="Celebrate, Unwind & Explore"
-          fill
-          className="object-cover"
-        />
-      </div>
+{/* IMAGE */}
+<div className="relative h-[520px] overflow-hidden rounded-2xl shadow-2xl">
+  <Image
+    src={CelebrateMomentsImg?.imageUrl || DEFAULT_PLACEHOLDER}
+    alt="After Hours at Kokum"
+    fill
+    className="object-cover"
+    sizes="(max-width:1024px) 100vw, 50vw"
+  />
+</div>
 
       {/* CONTENT */}
 
@@ -513,6 +517,75 @@ export default function LandingPage() {
 
     </div>
 
+{/* ================= AFTER HOURS AT KOKUM ================= */}
+
+<div className="mt-28 grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+
+  {/* CONTENT */}
+  <div className="space-y-7">
+
+    <SectionHeader
+      title="When the Celebrations Continue"
+      subtitle=""
+      centered={false}
+    />
+
+    <div>
+      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+        After Hours at Kokum
+      </p>
+    </div>
+
+    <p className="text-lg leading-8 text-slate-900 italic">
+      As the stars illuminate the Jodhpur sky, <strong>After Hours at Kokum </strong>
+      transforms into an elegant celebration under the open air. Framed by the
+      serene pool, glowing lights, and a vibrant atmosphere, this distinctive
+      venue comfortably accommodates <strong>800–1,000 guests</strong>, making it
+      the perfect setting for cocktail evenings, wedding after-parties, and
+      unforgettable celebrations with family and friends.
+    </p>
+
+    <div>
+      <h3 className="mb-5 font-headline text-2xl font-semibold text-slate-900">
+        Perfect For
+      </h3>
+
+      <ul className="space-y-4">
+        {[
+          "Cocktail Evenings",
+          "Wedding After-Parties",
+          "Live Music & Entertainment",
+          "Intimate Late-Night Celebrations",
+          "Poolside Celebrations Under the Stars",
+        ].map((item) => (
+          <li key={item} className="flex items-start gap-4">
+            <ShieldCheck className="mt-1 h-6 w-6 shrink-0 text-primary" />
+            <span className="text-lg text-slate-900">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <p className="text-lg font-bold italic text-slate-900">
+      Where every celebration continues long after the last dance.
+    </p>
+
+  </div>
+
+{/* IMAGE */}
+<div className="relative h-[520px] overflow-hidden rounded-2xl shadow-2xl">
+  <Image
+    src={OutDoorArielImg?.imageUrl || DEFAULT_PLACEHOLDER}
+    alt="After Hours at Kokum"
+    fill
+    className="object-cover"
+    sizes="(max-width:1024px) 100vw, 50vw"
+  />
+</div>
+
+</div>
+
+
     {/* ================= SECOND BLOCK ================= */}
 
     <div className="mt-28">
@@ -527,7 +600,7 @@ export default function LandingPage() {
         {[
 {
   title: "Grand Celebration Venues",
-  desc: "Five distinctive venues designed for every wedding celebration—from intimate Mehendi ceremonies to grand receptions for over 3,000 guests.",
+  desc: "Five distinctive venues designed for every wedding celebration—from intimate Mehendi ceremonies to grand receptions for over 3,000 pax.",
   icon: <Sparkles className="h-7 w-7" />,
 },
 
