@@ -10,7 +10,6 @@ type FormValues = {
   name: string
   email: string
   phone: string
-  lead_source: string
 }
 
 type FormErrors = Partial<Record<keyof FormValues, string>> & {
@@ -30,7 +29,6 @@ const defaultValues: FormValues = {
   name: "",
   email: "",
   phone: "",
-  lead_source: "Surpura Bagh",
 }
 
 function validateForm(values: FormValues) {
@@ -109,6 +107,7 @@ export default function LeadForm({
 
       if (!result.success) {
         console.warn("CRM Sync Issue:", result.error)
+        throw new Error(result.error)
       }
 
       router.push("/thank-you")
@@ -141,12 +140,6 @@ export default function LeadForm({
         className="space-y-4"
         noValidate
       >
-        <input
-          type="hidden"
-          name="lead_source"
-          value={values.lead_source}
-        />
-
         {/* Name */}
         <div className="space-y-1.5">
           <label
