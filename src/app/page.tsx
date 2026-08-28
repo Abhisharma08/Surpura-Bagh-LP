@@ -23,8 +23,11 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 const LOGO_URL =
   "https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1916,h_1210,r_0,c_crop,q_80,dpr_1,f_auto,fl_progressive/w_355,h_200,f_auto,c_fit/surpura-bagh/surpura_png_13250d6a";
 
+const HERO_BG_URL_MOBILE =
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/w_800,f_auto,q_auto:eco/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
+
 const HERO_BG_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/w_1600,f_auto,q_auto:eco/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
 
 const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
@@ -156,6 +159,7 @@ export default function LandingPage() {
               height={50}
               className="h-20 w-auto object-contain"
               priority
+              fetchPriority="high"
               quality={60}
             />
           </div>
@@ -174,13 +178,14 @@ export default function LandingPage() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src={HERO_BG_URL}
-              alt="Surpura Bagh"
+              src={HERO_BG_URL_MOBILE}
+              alt="Surpura Bagh Destination Wedding Venue"
               fill
               priority
-              sizes="100vw"
+              fetchPriority="high"
+              sizes="(max-width: 768px) 100vw, 100vw"
               className="object-cover"
-              quality={75}
+              unoptimized
             />
 
             {/* Dark Overlay */}

@@ -30,10 +30,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${belleza.variable}`}>
       <head>
-        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://assets.simplotel.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="" />
+        <link rel="preconnect" href="https://assets.simplotel.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://assets.simplotel.com" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/dw9v7jjrq/image/upload/w_800,f_auto,q_auto:eco/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png"
+          fetchPriority="high"
+        />
 
         <Script
           id="google-tag-manager"
