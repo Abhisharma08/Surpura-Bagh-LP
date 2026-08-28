@@ -3,7 +3,6 @@ import type {NextConfig} from 'next';
 const nextConfig: NextConfig = {
   basePath: '',
   skipTrailingSlashRedirect: true,
-  /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -11,6 +10,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
     remotePatterns: [
       {
         protocol: 'https',

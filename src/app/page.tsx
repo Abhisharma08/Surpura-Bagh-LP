@@ -34,8 +34,11 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 const LOGO_URL =
   "https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1916,h_1210,r_0,c_crop,q_80,dpr_1,f_auto,fl_progressive/w_355,h_200,f_auto,c_fit/surpura-bagh/surpura_png_13250d6a";
 
+const HERO_BG_MOBILE_URL =
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto:eco,w_640/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
+
 const HERO_BG_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto:good,w_1200/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
 
 const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
@@ -44,7 +47,7 @@ const STAYS = [
   title: "Village Lounge",
   description:
     "An intimate, hut-inspired celebration venue perfect for Mehendi ceremonies, Haldi functions, bridal brunches, and welcome lunches.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792500/Village_Lawn_jowloy.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784792500/Village_Lawn_jowloy.png",
   button: "Enquire Now →",
   features: [
     "Up to 300 pax",
@@ -58,7 +61,7 @@ const STAYS = [
   title: "Baradari Lawn",
   description:
     "Celebrate amidst centuries-old heritage architecture with one of Surpura Bagh's most iconic wedding settings.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792497/Bardari_at15jm.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784792497/Bardari_at15jm.png",
   button: "Enquire Now →",
   features: [
     "Historic Baradari",
@@ -72,7 +75,7 @@ const STAYS = [
   title: "Kokum",
   description:
     "A vibrant poolside venue for cocktail evenings, welcome dinners, Mehendi celebrations, and unforgettable after-parties.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792499/Kokum_yrdlwu.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784792499/Kokum_yrdlwu.png",
   button: "Enquire Now →",
   features: [
     "Poolside Venue",
@@ -86,7 +89,7 @@ const STAYS = [
   title: "Rasala Garden",
   description:
     "A beautifully landscaped venue ideal for Mehendi, Sangeet, cocktail evenings, and intimate wedding celebrations.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528697/Rasala_Lawn_jwy3kf.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784528697/Rasala_Lawn_jwy3kf.png",
   button: "Enquire Now →",
   features: [
     "6,500 sq. m. garden venue",
@@ -101,7 +104,7 @@ const STAYS = [
   title: "Mandore Lawn",
   description:
     "Our largest celebration venue, designed for grand destination weddings and lavish receptions.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528690/Mandore_lawn_yqhstx.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784528690/Mandore_lawn_yqhstx.png",
   button: "Enquire Now →",
   features: [
     "8,500 sq. m. lawn",
@@ -115,7 +118,7 @@ const STAYS = [
   title: "Luxury Stay for Wedding Guests",
   description:
     "Luxury Pool Villas, Plunge Pool Suites, Garden Suites, and Vana Executive Suites designed for complete comfort throughout your celebrations.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934482/Luxury_stay_z8p4t0.webp",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1783934482/Luxury_stay_z8p4t0.webp",
   button: "Enquire Now →",
   features: [
     "Private Plunge Pool Suites",
@@ -129,7 +132,7 @@ const STAYS = [
   title: "Wedding Planning & Hospitality",
   description:
     "From venue selection to guest management, our experienced team ensures every detail is seamlessly executed.",
-  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934484/wed_cja6l2.png",
+  image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1783934484/wed_cja6l2.png",
   button: "Enquire Now →",
   features: [
     "Dedicated wedding coordinator",
@@ -212,14 +215,22 @@ export default function LandingPage() {
 <section className="relative w-full overflow-hidden py-24 lg:py-32">
   {/* Background Image */}
   <div className="absolute inset-0">
-    <Image
-      src={HERO_BG_URL}
-      alt="Surpura Bagh"
-      fill
-      priority
-      className="object-cover"
-      quality={70}
-    />
+    <picture className="absolute inset-0 block h-full w-full">
+      <source
+        media="(max-width: 767px)"
+        srcSet={HERO_BG_MOBILE_URL}
+      />
+      <Image
+        src={HERO_BG_URL}
+        alt="Surpura Bagh"
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        className="object-cover"
+        quality={70}
+      />
+    </picture>
 
     {/* Dark Overlay */}
     <div className="absolute inset-0 bg-black/55" />
