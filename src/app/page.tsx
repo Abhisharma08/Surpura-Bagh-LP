@@ -261,7 +261,7 @@ export default function LandingPage() {
           <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
             <Home className="h-7 w-7 text-white mb-1.5" />
             <h3 className="text-base font-bold text-white">
-              4 Wedding Venues
+              5 Wedding Venues
             </h3>
 
             <p className="mt-0.5 text-xs text-white/80">
@@ -299,7 +299,7 @@ export default function LandingPage() {
 
       <div id="lead-form-top">
         <LeadForm
-          title="Book Your Stay at Surpura Bagh"
+          title="Plan Your Wedding at Surpura Bagh"
           subtitle="Complete the form below, and our team will get in touch to assist with your reservation and travel plans."
           buttonText="Get Quote for Wedding"
           className="max-w-sm mx-auto py-8"
@@ -781,7 +781,7 @@ export default function LandingPage() {
         <div className="flex flex-col gap-4 sm:flex-row justify-center items-center flex-wrap">
           <ScrollToLeadButton
             variant="outline"
-            className="border-primary px-8 py-6 text-base font-semibold text-primary hover:bg-primary/5 sm:px-6"
+            className="border-primary px-8 py-6 text-base font-semibold text-white hover:bg-primary/5 sm:px-6"
           >
             Explore Venues
           </ScrollToLeadButton>
@@ -815,7 +815,7 @@ export default function LandingPage() {
             <div className="mx-auto max-w-4xl">
               <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                 <div className="space-y-6">
-                  <h2 className="font-headline text-4xl text-white mb-2 font-headline font-bold">
+                  <h2 className="font-headline text-4xl text-black mb-2 font-headline font-bold">
                     Ready to Plan Your Dream Wedding?
                   </h2>
 
@@ -834,7 +834,7 @@ export default function LandingPage() {
                 </div>
 
               <LeadForm
-              title="Book Your Stay at Surpura Bagh"
+              title="Plan Your Wedding at Surpura Bagh"
               subtitle="Complete the form below, and our wedding specialists will get in touch to discuss your preferred dates, 
               guest count, venue options, accommodation, and customised wedding requirements."
               buttonText=" Enquire Now"

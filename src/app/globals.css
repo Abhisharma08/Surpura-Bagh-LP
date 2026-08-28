@@ -17,8 +17,8 @@
     --card-foreground: 35 100% 97%;
 
     /* Popovers */
-    --popover: 0 0% 0%;
-    --popover-foreground: 35 100% 97%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
 
     /* Brand */
     --primary: 25 59% 41%; /* #A45A2B */
@@ -29,8 +29,8 @@
     --secondary-foreground: 0 0% 100%;
 
     /* Muted */
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
     /* Accent */
     --accent: 25 59% 41%;
@@ -41,8 +41,8 @@
     --destructive-foreground: 0 0% 100%;
 
     /* Borders & Inputs */
-    --border: 25 59% 41%;
-    --input: 25 59% 41%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
     --ring: 25 59% 41%;
 
     /* Radius */
@@ -81,7 +81,7 @@
   p,
   span,
   li {
-    color: hsl(var(--foreground));
+    color: inherit;
   }
 
   a {
@@ -101,7 +101,7 @@
   }
 
   /* Buttons */
-  button {
+  button:not([data-slot="calendar"] button) {
     touch-action: manipulation;
     -webkit-user-select: none;
     user-select: none;
@@ -121,8 +121,7 @@
   input,
   textarea,
   select {
-    background: hsl(var(--background));
-    color: hsl(var(--foreground));
+    color: inherit;
     border-color: hsl(var(--border));
   }
 
@@ -139,7 +138,7 @@
 
   /* Mobile Touch Targets */
   @media (max-width: 768px) {
-    button {
+    button:not([data-slot="calendar"] button) {
       min-width: 48px;
       min-height: 48px;
     }
