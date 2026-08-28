@@ -34,20 +34,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://assets.simplotel.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://assets.simplotel.com" />
-        <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto:eco,w_640/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png"
-          fetchPriority="high"
-          media="(max-width: 767px)"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto:good,w_1200/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png"
-          fetchPriority="high"
-          media="(min-width: 768px)"
-        />
+
         <Script
           id="google-tag-manager"
           strategy="lazyOnload"

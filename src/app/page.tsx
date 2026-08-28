@@ -23,11 +23,8 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 const LOGO_URL =
   "https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1916,h_1210,r_0,c_crop,q_80,dpr_1,f_auto,fl_progressive/w_355,h_200,f_auto,c_fit/surpura-bagh/surpura_png_13250d6a";
 
-const HERO_BG_MOBILE_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto:eco,w_640/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
-
 const HERO_BG_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto:good,w_1200/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
 
 const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
@@ -176,22 +173,15 @@ export default function LandingPage() {
         <section className="relative w-full overflow-hidden py-24 lg:py-32">
           {/* Background Image */}
           <div className="absolute inset-0">
-            <picture className="absolute inset-0 block h-full w-full">
-              <source
-                media="(max-width: 767px)"
-                srcSet={HERO_BG_MOBILE_URL}
-              />
-              <Image
-                src={HERO_BG_URL}
-                alt="Surpura Bagh"
-                fill
-                priority
-                fetchPriority="high"
-                sizes="100vw"
-                className="object-cover"
-                quality={70}
-              />
-            </picture>
+            <Image
+              src={HERO_BG_URL}
+              alt="Surpura Bagh"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+              quality={75}
+            />
 
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/55" />
