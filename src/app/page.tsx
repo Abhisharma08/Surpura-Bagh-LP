@@ -21,7 +21,7 @@ import StayCardsCarousel from "@/components/StayCardsCarousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const LOGO_URL =
-  "https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_1916,h_1210,r_0,c_crop,q_80,dpr_1,f_auto,fl_progressive/w_355,h_200,f_auto,c_fit/surpura-bagh/surpura_png_13250d6a";
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1787985411/surpura_png_13250d6a_ctwjfo.avif";
 
 const HERO_BG_URL =
   "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
@@ -154,10 +154,9 @@ export default function LandingPage() {
               alt="Surpura Bagh Logo"
               width={200}
               height={50}
-              className="h-20 w-auto object-contain"
+              className="h-16 w-auto object-contain md:h-20"
               priority
-              fetchPriority="high"
-              quality={60}
+              unoptimized
             />
           </div>
 

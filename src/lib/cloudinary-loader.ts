@@ -18,5 +18,5 @@ export default function cloudinaryLoader({
       return `${parts[0]}/upload/w_${width},f_auto,${q}/${cleanPath}`;
     }
   }
-  return `${src}?w=${width}&q=${quality || 75}`;
+  return src;
 }
