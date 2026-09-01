@@ -185,7 +185,6 @@ export default function LandingPage() {
               fetchPriority="high"
               sizes="100vw"
               className="object-cover"
-              quality={65}
             />
 
             {/* Dark Overlay */}
