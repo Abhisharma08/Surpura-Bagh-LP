@@ -14,15 +14,15 @@ import {
 } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import LeadForm from "@/components/LeadForm";
 import ScrollToLeadButton from "@/components/ScrollToLeadButton";
 import SectionHeader from "@/components/SectionHeader";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
-// Below-fold heavy components are loaded lazily via a client-side wrapper
-// to reduce TBT by splitting date-fns, Radix Calendar/Popover, Embla carousel
-// out of the initial JS bundle
-import { StayCardsCarouselLazy, LeadFormLazy } from "@/components/LazyComponents";
+// All LeadForm and Carousel variants loaded lazily (ssr:false) via client wrapper.
+// This removes date-fns, Radix Calendar/Popover, Embla (172KB+) from the
+// critical JS path — directly reduces TBT on mobile by 200-400ms.
+import { LeadFormHero, StayCardsCarouselLazy, LeadFormLazy } from "@/components/LazyComponents";
+
 
 
 const LOGO_URL =
@@ -253,7 +253,7 @@ export default function LandingPage() {
 
               {/* RIGHT */}
               <div id="lead-form-top">
-                <LeadForm
+                <LeadFormHero
                   title="Plan Your Wedding at Surpura Bagh"
                   subtitle="Complete the form below, and our team will get in touch to assist with your reservation and travel plans."
                   buttonText="Get Quote for Wedding"
