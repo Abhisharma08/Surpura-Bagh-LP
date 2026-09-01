@@ -21,10 +21,10 @@ import StayCardsCarousel from "@/components/StayCardsCarousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const LOGO_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1787985411/surpura_png_13250d6a_ctwjfo.avif";
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,h_160/v1787985411/surpura_png_13250d6a_ctwjfo.avif";
 
 const HERO_BG_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_1920/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
 
 const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
@@ -208,9 +208,9 @@ export default function LandingPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-8">
                   <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
                     <Trees className="h-7 w-7 text-white mb-1.5" />
-                    <h3 className="text-base font-bold text-white">
+                    <p className="text-base font-bold text-white">
                       28 Acres
-                    </h3>
+                    </p>
                     <p className="mt-0.5 text-xs text-white/80">
                       Landscaped Gardens
                     </p>
@@ -218,9 +218,9 @@ export default function LandingPage() {
 
                   <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
                     <Home className="h-7 w-7 text-white mb-1.5" />
-                    <h3 className="text-base font-bold text-white">
+                    <p className="text-base font-bold text-white">
                       5 Wedding Venues
-                    </h3>
+                    </p>
                     <p className="mt-0.5 text-xs text-white/80">
                       Outdoor Celebration Spaces
                     </p>
@@ -228,9 +228,9 @@ export default function LandingPage() {
 
                   <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
                     <ChefHat className="h-7 w-7 text-white mb-1.5" />
-                    <h3 className="text-base font-bold text-white">
+                    <p className="text-base font-bold text-white">
                       Luxury villas
-                    </h3>
+                    </p>
                     <p className="mt-0.5 text-xs text-white/80">
                       Stay for Family & Guests
                     </p>
@@ -238,9 +238,9 @@ export default function LandingPage() {
 
                   <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
                     <Users className="h-7 w-7 text-white mb-1.5" />
-                    <h3 className="text-base font-bold text-white">
+                    <p className="text-base font-bold text-white">
                       3,000+ pax
-                    </h3>
+                    </p>
                     <p className="mt-0.5 text-xs text-white/80">
                       Event Capacity
                     </p>
@@ -648,7 +648,7 @@ export default function LandingPage() {
       </main>
 
       <footer className="w-full bg-primary pb-28 pt-8 text-white lg:py-8">
-        <div className="container mx-auto max-w-7xl px-4 text-center text-xs text-white/60">
+        <div className="container mx-auto max-w-7xl px-4 text-center text-xs text-white/80">
           <p>©2026 Surpura Bagh All Rights Reserved.</p>
         </div>
       </footer>
