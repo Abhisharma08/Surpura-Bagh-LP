@@ -24,7 +24,7 @@ const LOGO_URL =
   "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1787985411/surpura_png_13250d6a_ctwjfo.avif";
 
 const HERO_BG_URL =
-  "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
+  "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto/v1785136140/40938553-c8ce-4a88-9841-a1baf3ffc035_xzbu63.png";
 
 const DEFAULT_PLACEHOLDER =
   "https://picsum.photos/seed/placeholder/800/600";
@@ -182,6 +182,7 @@ export default function LandingPage() {
               sizes="100vw"
               className="object-cover"
               quality={75}
+              unoptimized
             />
 
             {/* Dark Overlay */}
