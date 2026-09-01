@@ -31,8 +31,8 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${belleza.variable}`}>
       <GoogleTagManager gtmId="GTM-T9NSTZP4" />
       <head>
-        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="" />
-        <link rel="preconnect" href="https://assets.simplotel.com" crossOrigin="" />
+        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="preconnect" href="https://assets.simplotel.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://assets.simplotel.com" />
       </head>
