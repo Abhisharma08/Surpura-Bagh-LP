@@ -17,8 +17,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import LeadForm from "@/components/LeadForm";
 import ScrollToLeadButton from "@/components/ScrollToLeadButton";
 import SectionHeader from "@/components/SectionHeader";
-import StayCardsCarousel from "@/components/StayCardsCarousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+
+// Below-fold heavy components are loaded lazily via a client-side wrapper
+// to reduce TBT by splitting date-fns, Radix Calendar/Popover, Embla carousel
+// out of the initial JS bundle
+import { StayCardsCarouselLazy, LeadFormLazy } from "@/components/LazyComponents";
+
 
 const LOGO_URL =
   "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1787985411/surpura_png_13250d6a_ctwjfo.avif";
@@ -566,7 +571,7 @@ export default function LandingPage() {
                 Choose Your Wedding Experience
               </h2>
 
-              <StayCardsCarousel stays={STAYS} />
+              <StayCardsCarouselLazy stays={STAYS} />
 
               {/* CTA BLOCK */}
               <div className="mt-20 text-center">
@@ -631,11 +636,11 @@ export default function LandingPage() {
                   </ScrollToLeadButton>
                 </div>
 
-                <LeadForm
+                <LeadFormLazy
                   title="Plan Your Wedding at Surpura Bagh"
                   subtitle="Complete the form below, and our wedding specialists will get in touch to discuss your preferred dates, 
                   guest count, venue options, accommodation, and customised wedding requirements."
-                  buttonText=" Enquire Now"
+                  buttonText=" Enquire Now"
                   buttonclassName="italic tracking-wide"
                   bottomText={<></>}
                 />
