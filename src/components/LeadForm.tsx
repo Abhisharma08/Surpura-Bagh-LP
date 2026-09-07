@@ -199,9 +199,9 @@ export default function LeadForm({
       className={`rounded-xl border border-muted bg-white p-6 shadow-2xl md:p-8 ${className}`}
     >
       {title ? (
-        <h3 className="mb-2 text-4xl font-headline font-bold text-slate-900">
+        <h2 className="mb-2 text-4xl font-headline font-bold text-slate-900">
           {title}
-        </h3>
+        </h2>
       ) : null}
 
       {subtitle ? (

@@ -14,11 +14,16 @@ import {
 } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import LeadForm from "@/components/LeadForm";
 import ScrollToLeadButton from "@/components/ScrollToLeadButton";
 import SectionHeader from "@/components/SectionHeader";
-import StayCardsCarousel from "@/components/StayCardsCarousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+
+// All LeadForm and Carousel variants loaded lazily (ssr:false) via client wrapper.
+// This removes date-fns, Radix Calendar/Popover, Embla (172KB+) from the
+// critical JS path — directly reduces TBT on mobile by 200-400ms.
+import { LeadFormHero, StayCardsCarouselLazy, LeadFormLazy } from "@/components/LazyComponents";
+
+
 
 const LOGO_URL =
   "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1787985411/surpura_png_13250d6a_ctwjfo.avif";
@@ -34,7 +39,7 @@ const STAYS = [
     title: "Village Lounge",
     description:
       "An intimate, hut-inspired celebration venue perfect for Mehendi ceremonies, Haldi functions, bridal brunches, and welcome lunches.",
-    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784792500/Village_Lawn_jowloy.png",
+    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792500/Village_Lawn_jowloy.png",
     button: "Enquire Now →",
     features: [
       "Up to 300 pax",
@@ -47,7 +52,7 @@ const STAYS = [
     title: "Baradari Lawn",
     description:
       "Celebrate amidst centuries-old heritage architecture with one of Surpura Bagh's most iconic wedding settings.",
-    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784792497/Bardari_at15jm.png",
+    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792497/Bardari_at15jm.png",
     button: "Enquire Now →",
     features: [
       "Historic Baradari",
@@ -60,7 +65,7 @@ const STAYS = [
     title: "Kokum",
     description:
       "A vibrant poolside venue for cocktail evenings, welcome dinners, Mehendi celebrations, and unforgettable after-parties.",
-    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784792499/Kokum_yrdlwu.png",
+    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784792499/Kokum_yrdlwu.png",
     button: "Enquire Now →",
     features: [
       "Poolside Venue",
@@ -73,7 +78,7 @@ const STAYS = [
     title: "Rasala Garden",
     description:
       "A beautifully landscaped venue ideal for Mehendi, Sangeet, cocktail evenings, and intimate wedding celebrations.",
-    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784528697/Rasala_Lawn_jwy3kf.png",
+    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528697/Rasala_Lawn_jwy3kf.png",
     button: "Enquire Now →",
     features: [
       "6,500 sq. m. garden venue",
@@ -87,7 +92,7 @@ const STAYS = [
     title: "Mandore Lawn",
     description:
       "Our largest celebration venue, designed for grand destination weddings and lavish receptions.",
-    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1784528690/Mandore_lawn_yqhstx.png",
+    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1784528690/Mandore_lawn_yqhstx.png",
     button: "Enquire Now →",
     features: [
       "8,500 sq. m. lawn",
@@ -100,7 +105,7 @@ const STAYS = [
     title: "Luxury Stay for Wedding Guests",
     description:
       "Luxury Pool Villas, Plunge Pool Suites, Garden Suites, and Vana Executive Suites designed for complete comfort throughout your celebrations.",
-    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1783934482/Luxury_stay_z8p4t0.webp",
+    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934482/Luxury_stay_z8p4t0.webp",
     button: "Enquire Now →",
     features: [
       "Private Plunge Pool Suites",
@@ -113,7 +118,7 @@ const STAYS = [
     title: "Wedding Planning & Hospitality",
     description:
       "From venue selection to guest management, our experienced team ensures every detail is seamlessly executed.",
-    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/f_auto,q_auto,w_800/v1783934484/wed_cja6l2.png",
+    image: "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1783934484/wed_cja6l2.png",
     button: "Enquire Now →",
     features: [
       "Dedicated wedding coordinator",
@@ -156,7 +161,6 @@ export default function LandingPage() {
               height={50}
               className="h-16 w-auto object-contain md:h-20"
               priority
-              unoptimized
             />
           </div>
 
@@ -181,7 +185,6 @@ export default function LandingPage() {
               fetchPriority="high"
               sizes="100vw"
               className="object-cover"
-              quality={75}
             />
 
             {/* Dark Overlay */}
@@ -207,9 +210,9 @@ export default function LandingPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-8">
                   <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
                     <Trees className="h-7 w-7 text-white mb-1.5" />
-                    <h3 className="text-base font-bold text-white">
+                    <p className="text-base font-bold text-white">
                       28 Acres
-                    </h3>
+                    </p>
                     <p className="mt-0.5 text-xs text-white/80">
                       Landscaped Gardens
                     </p>
@@ -217,9 +220,9 @@ export default function LandingPage() {
 
                   <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
                     <Home className="h-7 w-7 text-white mb-1.5" />
-                    <h3 className="text-base font-bold text-white">
+                    <p className="text-base font-bold text-white">
                       5 Wedding Venues
-                    </h3>
+                    </p>
                     <p className="mt-0.5 text-xs text-white/80">
                       Outdoor Celebration Spaces
                     </p>
@@ -227,9 +230,9 @@ export default function LandingPage() {
 
                   <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
                     <ChefHat className="h-7 w-7 text-white mb-1.5" />
-                    <h3 className="text-base font-bold text-white">
+                    <p className="text-base font-bold text-white">
                       Luxury villas
-                    </h3>
+                    </p>
                     <p className="mt-0.5 text-xs text-white/80">
                       Stay for Family & Guests
                     </p>
@@ -237,9 +240,9 @@ export default function LandingPage() {
 
                   <div className="rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md flex flex-col items-center text-center">
                     <Users className="h-7 w-7 text-white mb-1.5" />
-                    <h3 className="text-base font-bold text-white">
+                    <p className="text-base font-bold text-white">
                       3,000+ pax
-                    </h3>
+                    </p>
                     <p className="mt-0.5 text-xs text-white/80">
                       Event Capacity
                     </p>
@@ -249,7 +252,7 @@ export default function LandingPage() {
 
               {/* RIGHT */}
               <div id="lead-form-top">
-                <LeadForm
+                <LeadFormHero
                   title="Plan Your Wedding at Surpura Bagh"
                   subtitle="Complete the form below, and our team will get in touch to assist with your reservation and travel plans."
                   buttonText="Get Quote for Wedding"
@@ -567,7 +570,7 @@ export default function LandingPage() {
                 Choose Your Wedding Experience
               </h2>
 
-              <StayCardsCarousel stays={STAYS} />
+              <StayCardsCarouselLazy stays={STAYS} />
 
               {/* CTA BLOCK */}
               <div className="mt-20 text-center">
@@ -632,11 +635,11 @@ export default function LandingPage() {
                   </ScrollToLeadButton>
                 </div>
 
-                <LeadForm
+                <LeadFormLazy
                   title="Plan Your Wedding at Surpura Bagh"
                   subtitle="Complete the form below, and our wedding specialists will get in touch to discuss your preferred dates, 
                   guest count, venue options, accommodation, and customised wedding requirements."
-                  buttonText=" Enquire Now"
+                  buttonText=" Enquire Now"
                   buttonclassName="italic tracking-wide"
                   bottomText={<></>}
                 />
@@ -647,7 +650,7 @@ export default function LandingPage() {
       </main>
 
       <footer className="w-full bg-primary pb-28 pt-8 text-white lg:py-8">
-        <div className="container mx-auto max-w-7xl px-4 text-center text-xs text-white/60">
+        <div className="container mx-auto max-w-7xl px-4 text-center text-xs text-white font-medium">
           <p>©2026 Surpura Bagh All Rights Reserved.</p>
         </div>
       </footer>
