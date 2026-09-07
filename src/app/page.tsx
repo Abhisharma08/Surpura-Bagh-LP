@@ -162,7 +162,7 @@ export default function LandingPage() {
 
           <div className="flex items-center gap-4">
             <ScrollToLeadButton className="bg-primary px-6 font-bold text-white hover:bg-primary/90">
-              Book Your Stay
+              Book Your Wedding
             </ScrollToLeadButton>
           </div>
         </div>
@@ -655,7 +655,7 @@ export default function LandingPage() {
       <div className="fixed bottom-0 left-0 right-0 z-30 flex w-screen gap-2 border-t bg-white p-4 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] lg:hidden">
         <div className="mx-auto flex w-full max-w-7xl gap-2 px-4">
           <ScrollToLeadButton className="h-12 flex-1 bg-secondary font-bold text-white">
-            Book Your Stay at Surpura Bagh
+            ‘Book Your Wedding at Surpura Bagh
           </ScrollToLeadButton>
         </div>
       </div>
