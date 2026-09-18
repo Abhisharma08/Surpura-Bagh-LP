@@ -36,6 +36,16 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://assets.simplotel.com" />
       </head>
       <body className="font-body antialiased">
+        {/* Google tag (gtag.js) */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-18150139522" strategy="afterInteractive" />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18150139522');
+          `}
+        </Script>
         <Script id="google-tag-manager" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
