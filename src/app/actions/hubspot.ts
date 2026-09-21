@@ -34,13 +34,10 @@ export async function submitToHubSpot(data: HubSpotLeadData) {
 
     if (data.step === 2) {
       if (data.weddingDate) {
-        // HubSpot often requires Date properties to be a midnight UTC timestamp in milliseconds
-        const dateObj = new Date(data.weddingDate);
-        const midnightUTC = Date.UTC(dateObj.getUTCFullYear(), dateObj.getUTCMonth(), dateObj.getUTCDate());
-        properties.wedding_date = midnightUTC.toString();
+        properties.wedding_date = data.weddingDate;
       }
       if (data.guestCount) {
-        properties.number_of_guest = data.guestCount;
+        properties.number_of_guests = data.guestCount;
       }
       // Removed properties.message as it's not a default HubSpot property and causes 400 errors
     }
