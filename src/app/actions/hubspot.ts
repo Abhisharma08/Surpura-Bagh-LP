@@ -34,12 +34,10 @@ export async function submitToHubSpot(data: HubSpotLeadData) {
 
     if (data.step === 2) {
       if (data.weddingDate) {
-        properties.weddingdate = data.weddingDate;
         properties.wedding_date = data.weddingDate;
       }
       if (data.guestCount) {
-        properties.guest_count = data.guestCount;
-        properties.number_of_guests = data.guestCount;
+        properties.number_of_guest = data.guestCount;
       }
       properties.message = `Wedding Date: ${data.weddingDate || 'N/A'}, Guest Count: ${data.guestCount || 'N/A'}`;
     }
@@ -79,6 +77,8 @@ export async function submitToHubSpot(data: HubSpotLeadData) {
       }
 
       // If PATCH fails because of unrecognized custom property, retry with standard properties only
+      console.warn('HubSpot rejected PATCH (409->400?). Retrying with safe properties. Error:', await updateRes.clone().text().catch(() => ''));
+      
       const safeProperties: Record<string, string> = {
         email: data.email,
         firstname: firstname || '',
@@ -105,6 +105,8 @@ export async function submitToHubSpot(data: HubSpotLeadData) {
 
     // If initial POST failed due to unknown custom property (400), retry with safe properties
     if (response.status === 400) {
+      console.warn('HubSpot rejected some properties (400). Retrying with safe properties. Error:', errorData);
+      
       const safeProperties: Record<string, string> = {
         email: data.email,
         firstname: firstname || '',
